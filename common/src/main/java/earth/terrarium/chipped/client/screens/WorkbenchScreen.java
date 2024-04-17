@@ -73,13 +73,11 @@ public class WorkbenchScreen extends AbstractContainerCursorScreen<WorkbenchMenu
         super.init();
 
         searchBox = addRenderableWidget(new EditBox(font, leftPos + 105, topPos + 27, 115, 11, Component.empty()));
-        searchBox.setCanLoseFocus(false);
         searchBox.setTextColor(-1);
         searchBox.setTextColorUneditable(-1);
         searchBox.setBordered(false);
         searchBox.setMaxLength(50);
         searchBox.setResponder(this::onSearchBarChanged);
-        setInitialFocus(searchBox);
         searchBox.setEditable(false);
 
         addRenderableWidget(new ImageButton(leftPos + 9, topPos + 121,
@@ -149,7 +147,7 @@ public class WorkbenchScreen extends AbstractContainerCursorScreen<WorkbenchMenu
         int left = (width - imageWidth) / 2;
         int top = (height - imageHeight) / 2;
         grid.setY(top + 41 - (int) scrollAmount);
-        try (var ignored = RenderUtils.createScissorBox(Objects.requireNonNull(minecraft), graphics.pose(), left + 84, top + 40, 163, 101)) {
+        try (var ignored = RenderUtils.createScissorBox(Objects.requireNonNull(minecraft), graphics.pose(), left + 84, top + 40, 163, 109)) {
             for (var widget : slotWidgets) {
                 widget.renderWidget(graphics, mouseX, mouseY, partialTick);
             }
@@ -211,12 +209,16 @@ public class WorkbenchScreen extends AbstractContainerCursorScreen<WorkbenchMenu
     public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
         if (keyCode == GLFW.GLFW_KEY_ESCAPE) {
             onClose();
+            return true;
         }
 
-        setFocused(searchBox);
-        return searchBox.keyPressed(keyCode, scanCode, modifiers)
-            || searchBox.canConsumeInput()
-            || super.keyPressed(keyCode, scanCode, modifiers);
+        if (getFocused() == searchBox) {
+            return searchBox.keyPressed(keyCode, scanCode, modifiers)
+                || searchBox.canConsumeInput()
+                || super.keyPressed(keyCode, scanCode, modifiers);
+        }
+
+        return super.keyPressed(keyCode, scanCode, modifiers);
     }
 
     @Override
@@ -236,7 +238,7 @@ public class WorkbenchScreen extends AbstractContainerCursorScreen<WorkbenchMenu
 
     protected void setScrollAmount(double amount) {
         int rows = Mth.ceil(menu.results().size() / 9f);
-        scrollAmount = Mth.clamp(amount, 0, rows * 18 - 100);
+        scrollAmount = Mth.clamp(amount, 0, rows * 18 - 108);
     }
 
     public void craft() {
@@ -246,6 +248,7 @@ public class WorkbenchScreen extends AbstractContainerCursorScreen<WorkbenchMenu
             menu.reset();
             addSlotWidgets();
             scrollAmount = 0;
+            setFocused(null);
         }
     }
 
