@@ -1,3 +1,4 @@
 - Updated the workbench models and textures.
+- Added storage block conversion recipes.
 - The workbench screen is no longer focused on the search box by default.
 - The workbench screen no longer has the bottom row cut off.
