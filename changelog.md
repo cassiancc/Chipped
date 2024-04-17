@@ -1,2 +1,2 @@
-- Added workbench items, allowing you to chip items without needing the workbench block.
-- Fixed crash on startup when Architectury API is not installed due to accessing protected TransparentBlock class.
+- The workbench screen is no longer focused on the search box by default.
+- The workbench screen no longer has the bottom row cut off.

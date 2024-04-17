@@ -9,7 +9,7 @@ repositories {
 }
 
 dependencies {
-    "modImplementation"(group = "earth.terrarium.chipped", name = "chipped-$modLoader-$minecraftVersion", version = chippedVersion)
+    modImplementation(group = "earth.terrarium.chipped", name = "chipped-$modLoader-$minecraftVersion", version = chippedVersion)
 }
 ```
 
@@ -22,6 +22,6 @@ repositories {
 }
 
 dependencies {
-    "modImplementation" group: "earth.terrarium.chipped", name: "chipped-$modLoader-$minecraftVersion", version: chippedVersion
+    modImplementation group: "earth.terrarium.chipped", name: "chipped-$modLoader-$minecraftVersion", version: chippedVersion
 }
 ```
