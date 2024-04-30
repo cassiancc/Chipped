@@ -1,6 +1,6 @@
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
-rootProject.name = "Chipped"
+rootProject.name = "chipped"
 
 pluginManagement {
     repositories {
