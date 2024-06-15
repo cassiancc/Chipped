@@ -303,7 +303,7 @@ public class ModCtmTextureProvider implements DataProvider {
     }
 
     public String getTexture(String texture) {
-        ResourceLocation location = ResourceLocation.withDefaultNamespace(texture);
+        ResourceLocation location = ResourceLocation.parse(texture);
         return this.commonTextures.getOrDefault(location, location).toString();
     }
 }

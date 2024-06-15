@@ -219,7 +219,7 @@ public class ModCtmModelProvider implements DataProvider {
 
                         JsonObject ctmTextures = new JsonObject();
                         ctmTextures.addProperty("particle", ctmTexture);
-                        ResourceLocation main = ResourceLocation.withDefaultNamespace(ctmTexture.substring(0, ctmTexture.lastIndexOf("/")));
+                        ResourceLocation main = ResourceLocation.parse(ctmTexture.substring(0, ctmTexture.lastIndexOf("/")));
                         String blockName = ctmTexture.substring(ctmTexture.lastIndexOf("/") + 1);
                         String suffix = ctm.getFirst().suffix().length() > 0 ? "_" + ctm.getFirst().suffix() : "";
                         for (var entry : ctm.getFirst().getTextureIds()) {
