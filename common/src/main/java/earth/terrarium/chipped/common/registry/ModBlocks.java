@@ -43,7 +43,7 @@ public class ModBlocks {
     public static final ResourcefulRegistry<Block> BLOCKS = ResourcefulRegistries.create(BuiltInRegistries.BLOCK, Chipped.MOD_ID);
     public static final ResourcefulRegistry<Block> BENCHES = ResourcefulRegistries.create(BLOCKS);
 
-    public static final TagKey<Block> SOUL_SAND_TAG = TagKey.create(Registries.BLOCK, new ResourceLocation(Chipped.MOD_ID, "soul_sand"));
+    public static final TagKey<Block> SOUL_SAND_TAG = TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "soul_sand"));
 
     public static final RegistryEntry<Block> BOTANIST_WORKBENCH = BENCHES.register("botanist_workbench", () -> new WorkbenchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
     public static final RegistryEntry<Block> GLASSBLOWER = BENCHES.register("glassblower", () -> new WorkbenchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));

@@ -5,6 +5,7 @@ import earth.terrarium.chipped.Chipped;
 import earth.terrarium.chipped.common.registry.ModItems;
 import earth.terrarium.chipped.datagen.builder.ChippedRecipeBuilder;
 import net.minecraft.MethodsReturnNonnullByDefault;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
@@ -20,6 +21,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
@@ -27,8 +29,8 @@ import java.util.function.Supplier;
 public class ModRecipeProvider extends RecipeProvider {
     private RecipeOutput output;
 
-    public ModRecipeProvider(PackOutput output) {
-        super(output);
+    public ModRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+        super(output, lookupProvider);
     }
 
     @Override
@@ -38,7 +40,7 @@ public class ModRecipeProvider extends RecipeProvider {
 
         ModBlockTagProvider.registerTags((block, registry, tag, workbench, mineableTag) -> {
             var ingredients = workbenchTags.getOrDefault(workbench, new ArrayList<>());
-            TagKey<Item> item = TagKey.create(Registries.ITEM, new ResourceLocation(Chipped.MOD_ID, tag));
+            TagKey<Item> item = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, tag));
             ingredients.add(Ingredient.of(item));
             workbenchTags.put(workbench, ingredients);
         });

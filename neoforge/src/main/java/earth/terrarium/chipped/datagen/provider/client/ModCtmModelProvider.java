@@ -208,18 +208,18 @@ public class ModCtmModelProvider implements DataProvider {
             futures.add(CompletableFuture.runAsync(() -> {
                 final String id = registry.getCustomBase().orElse(BuiltInRegistries.BLOCK.getKey(registry.getBase()).getPath());
                 for (var ctm : registry.getPalette().getSpecial()) {
-                    final ResourceLocation blockLoc = new ResourceLocation(Chipped.MOD_ID, "block/" + ctm.getSecond().replace("%", id));
-                    final ResourceLocation location = new ResourceLocation(Chipped.MOD_ID, "blockstates/" + ctm.getSecond().replace("%", id) + ".json");
+                    final ResourceLocation blockLoc = ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "block/" + ctm.getSecond().replace("%", id));
+                    final ResourceLocation location = ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "blockstates/" + ctm.getSecond().replace("%", id) + ".json");
                     Path path = this.output.getOutputFolder(PackOutput.Target.RESOURCE_PACK).resolve(location.getNamespace()).resolve(location.getPath());
                     try {
-                        Block block = BuiltInRegistries.BLOCK.get(new ResourceLocation(Chipped.MOD_ID, ctm.getSecond().replace("%", id)));
+                        Block block = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, ctm.getSecond().replace("%", id)));
                         var json = files.getGeneratedBlockStates().get(block).toJson();
                         var textures = GsonHelper.getAsJsonObject(files.models().generatedModels.get(blockLoc).toJson(), "textures");
                         var ctmTexture = getCommonTexture(textures);
 
                         JsonObject ctmTextures = new JsonObject();
                         ctmTextures.addProperty("particle", ctmTexture);
-                        ResourceLocation main = new ResourceLocation(ctmTexture.substring(0, ctmTexture.lastIndexOf("/")));
+                        ResourceLocation main = ResourceLocation.withDefaultNamespace(ctmTexture.substring(0, ctmTexture.lastIndexOf("/")));
                         String blockName = ctmTexture.substring(ctmTexture.lastIndexOf("/") + 1);
                         String suffix = ctm.getFirst().suffix().length() > 0 ? "_" + ctm.getFirst().suffix() : "";
                         for (var entry : ctm.getFirst().getTextureIds()) {
@@ -228,7 +228,7 @@ public class ModCtmModelProvider implements DataProvider {
 
                         ctm.getFirst().addTextureInfo(json);
                         json.add("ctm_textures", ctmTextures);
-                        json.addProperty(new ResourceLocation(DefaultModels.MODID, "loader").toString(), new ResourceLocation(DefaultModels.MODID, ctm.getFirst().id()).toString());
+                        json.addProperty(ResourceLocation.fromNamespaceAndPath(DefaultModels.MODID, "loader").toString(), ResourceLocation.fromNamespaceAndPath(DefaultModels.MODID, ctm.getFirst().id()).toString());
                         DataProvider.saveStable(arg, json, path).join();
                     } catch (Exception e) {
                         System.out.println("Missing model: " + location);

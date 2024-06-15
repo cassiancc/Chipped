@@ -14,7 +14,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 
 public class SlotWidget extends AbstractWidget {
-    public static final ResourceLocation TEXTURE = new ResourceLocation(Chipped.MOD_ID, "textures/gui/sprites/slot.png");
+    public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "textures/gui/sprites/slot.png");
 
     private final ItemStack stack;
     private final WorkbenchMenu menu;

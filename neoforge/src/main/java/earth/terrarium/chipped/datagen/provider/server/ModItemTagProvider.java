@@ -128,7 +128,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
     }
 
     private void createSet(Block block, Collection<RegistryEntry<Block>> registry, String tag, TagKey<Item> workbench, @Nullable TagKey<Block> ignored) {
-        var tagKey = TagKey.create(Registries.ITEM, new ResourceLocation(Chipped.MOD_ID, tag));
+        var tagKey = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, tag));
         if (block != null) {
             tag(tagKey).add(TagEntry.element(Objects.requireNonNull(BuiltInRegistries.BLOCK.getKey(block))));
         }

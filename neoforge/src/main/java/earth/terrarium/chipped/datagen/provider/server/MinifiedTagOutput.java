@@ -58,8 +58,8 @@ public class MinifiedTagOutput extends MinifiedProvider.MinifiedOutput {
     public void writeIfNeeded(@NotNull Path path, byte @NotNull [] data, @NotNull HashCode hashCode) throws IOException {
         if (path.toString().endsWith(".json")) {
             JsonElement element = Constants.GSON.fromJson(new String(data, StandardCharsets.UTF_8), JsonElement.class);
-            TagFile file = TagFile.CODEC.parse(JsonOps.INSTANCE, element).getOrThrow(false, System.err::println);
-            element = BETTER_CODEC.encodeStart(JsonOps.INSTANCE, file).getOrThrow(false, System.err::println);
+            TagFile file = TagFile.CODEC.parse(JsonOps.INSTANCE, element).getOrThrow();
+            element = BETTER_CODEC.encodeStart(JsonOps.INSTANCE, file).getOrThrow();
             writeMinifiedJson(this.parent, path, element);
         } else {
             this.parent.writeIfNeeded(path, data, hashCode);

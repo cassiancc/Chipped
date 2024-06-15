@@ -32,7 +32,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        ModBlocks.BENCHES.stream().forEach(b -> horizontalBlock(b.get(), models().getExistingFile(new ResourceLocation(Chipped.MOD_ID, "block/" + name(b.get())))));
+        ModBlocks.BENCHES.stream().forEach(b -> horizontalBlock(b.get(), models().getExistingFile(ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "block/" + name(b.get())))));
 
         createSet(ModBlocks.AMETHYST_BLOCK, "amethyst_block");
         createSet(ModBlocks.ANCIENT_DEBRIS, "ancient_debris");
@@ -240,12 +240,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         createSet(ModBlocks.PEARLESCENT_FROGLIGHT, "pearlescent_froglight");
         createSet(ModBlocks.VERDANT_FROGLIGHT, "verdant_froglight");
 
-        createSnowyLeaves(BuiltInRegistries.BLOCK.get(new ResourceLocation(Chipped.MOD_ID, "frosted_acacia_leaves")), "acacia_leaves");
-        createSnowyLeaves(BuiltInRegistries.BLOCK.get(new ResourceLocation(Chipped.MOD_ID, "frosted_birch_leaves")), "birch_leaves");
-        createSnowyLeaves(BuiltInRegistries.BLOCK.get(new ResourceLocation(Chipped.MOD_ID, "frosted_dark_oak_leaves")), "dark_oak_leaves");
-        createSnowyLeaves(BuiltInRegistries.BLOCK.get(new ResourceLocation(Chipped.MOD_ID, "frosted_jungle_leaves")), "jungle_leaves");
-        createSnowyLeaves(BuiltInRegistries.BLOCK.get(new ResourceLocation(Chipped.MOD_ID, "frosted_oak_leaves")), "oak_leaves");
-        createSnowyLeaves(BuiltInRegistries.BLOCK.get(new ResourceLocation(Chipped.MOD_ID, "frosted_spruce_leaves")), "spruce_leaves");
+        createSnowyLeaves(BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "frosted_acacia_leaves")), "acacia_leaves");
+        createSnowyLeaves(BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "frosted_birch_leaves")), "birch_leaves");
+        createSnowyLeaves(BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "frosted_dark_oak_leaves")), "dark_oak_leaves");
+        createSnowyLeaves(BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "frosted_jungle_leaves")), "jungle_leaves");
+        createSnowyLeaves(BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "frosted_oak_leaves")), "oak_leaves");
+        createSnowyLeaves(BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "frosted_spruce_leaves")), "spruce_leaves");
 
         createSet(ModBlocks.DIAMOND_BLOCK, "diamond_block");
         createSet(ModBlocks.EMERALD_BLOCK, "emerald_block");
@@ -341,16 +341,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void createPointedDripstoneSet(ResourcefulRegistry<Block> registry, String folder) {
         createSet(registry, -1, false, (block, i) -> {
             ResourceLocation texture = customTexture(block, folder);
-            BlockModelBuilder downBase = createChildModel(extend(texture, "_down_base"), new ResourceLocation("block/pointed_dripstone"), extend(texture, "_down_base"), "cross");
-            BlockModelBuilder downFrustum = createChildModel(extend(texture, "_down_frustum"), new ResourceLocation("block/pointed_dripstone"), extend(texture, "_down_frustum"), "cross");
-            BlockModelBuilder downMiddle = createChildModel(extend(texture, "_down_middle"), new ResourceLocation("block/pointed_dripstone"), extend(texture, "_down_middle"), "cross");
-            BlockModelBuilder downTipMerge = createChildModel(extend(texture, "_down_tip_merge"), new ResourceLocation("block/pointed_dripstone"), extend(texture, "_down_tip_merge"), "cross");
-            BlockModelBuilder downTip = createChildModel(extend(texture, "_down_tip"), new ResourceLocation("block/pointed_dripstone"), extend(texture, "_down_tip"), "cross");
-            BlockModelBuilder upBase = createChildModel(extend(texture, "_up_base"), new ResourceLocation("block/pointed_dripstone"), extend(texture, "_up_base"), "cross");
-            BlockModelBuilder upFrustum = createChildModel(extend(texture, "_up_frustum"), new ResourceLocation("block/pointed_dripstone"), extend(texture, "_up_frustum"), "cross");
-            BlockModelBuilder upMiddle = createChildModel(extend(texture, "_up_middle"), new ResourceLocation("block/pointed_dripstone"), extend(texture, "_up_middle"), "cross");
-            BlockModelBuilder upTipMerge = createChildModel(extend(texture, "_up_tip_merge"), new ResourceLocation("block/pointed_dripstone"), extend(texture, "_up_tip_merge"), "cross");
-            BlockModelBuilder upTip = createChildModel(extend(texture, "_up_tip"), new ResourceLocation("block/pointed_dripstone"), extend(texture, "_up_tip"), "cross");
+            BlockModelBuilder downBase = createChildModel(extend(texture, "_down_base"), ResourceLocation.withDefaultNamespace("block/pointed_dripstone"), extend(texture, "_down_base"), "cross");
+            BlockModelBuilder downFrustum = createChildModel(extend(texture, "_down_frustum"), ResourceLocation.withDefaultNamespace("block/pointed_dripstone"), extend(texture, "_down_frustum"), "cross");
+            BlockModelBuilder downMiddle = createChildModel(extend(texture, "_down_middle"), ResourceLocation.withDefaultNamespace("block/pointed_dripstone"), extend(texture, "_down_middle"), "cross");
+            BlockModelBuilder downTipMerge = createChildModel(extend(texture, "_down_tip_merge"), ResourceLocation.withDefaultNamespace("block/pointed_dripstone"), extend(texture, "_down_tip_merge"), "cross");
+            BlockModelBuilder downTip = createChildModel(extend(texture, "_down_tip"), ResourceLocation.withDefaultNamespace("block/pointed_dripstone"), extend(texture, "_down_tip"), "cross");
+            BlockModelBuilder upBase = createChildModel(extend(texture, "_up_base"), ResourceLocation.withDefaultNamespace("block/pointed_dripstone"), extend(texture, "_up_base"), "cross");
+            BlockModelBuilder upFrustum = createChildModel(extend(texture, "_up_frustum"), ResourceLocation.withDefaultNamespace("block/pointed_dripstone"), extend(texture, "_up_frustum"), "cross");
+            BlockModelBuilder upMiddle = createChildModel(extend(texture, "_up_middle"), ResourceLocation.withDefaultNamespace("block/pointed_dripstone"), extend(texture, "_up_middle"), "cross");
+            BlockModelBuilder upTipMerge = createChildModel(extend(texture, "_up_tip_merge"), ResourceLocation.withDefaultNamespace("block/pointed_dripstone"), extend(texture, "_up_tip_merge"), "cross");
+            BlockModelBuilder upTip = createChildModel(extend(texture, "_up_tip"), ResourceLocation.withDefaultNamespace("block/pointed_dripstone"), extend(texture, "_up_tip"), "cross");
 
             getVariantBuilder(block)
                 .forAllStates(state -> {
@@ -414,21 +414,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
         createSet(registry, exclude, (block, i) -> {
             if (block instanceof RotatedPillarBlock) {
                 ResourceLocation side = customTexture(block, folder);
-                ResourceLocation end = new ResourceLocation(key(block).getNamespace(), ModelProvider.BLOCK_FOLDER + "/" + folder + "/polished_" + name(registry.getBase()));
+                ResourceLocation end = ResourceLocation.fromNamespaceAndPath(key(block).getNamespace(), ModelProvider.BLOCK_FOLDER + "/" + folder + "/polished_" + name(registry.getBase()));
                 if (!exFileHelper.exists(end, new ExistingFileHelper.ResourceType(PackType.CLIENT_RESOURCES, ".png", "textures"))) {
-                    end = new ResourceLocation(key(block).getNamespace(), ModelProvider.BLOCK_FOLDER + "/" + folder + "/" + name(registry.getBase()) + "_tile");
+                    end = ResourceLocation.fromNamespaceAndPath(key(block).getNamespace(), ModelProvider.BLOCK_FOLDER + "/" + folder + "/" + name(registry.getBase()) + "_tile");
                 }
                 if (!exFileHelper.exists(end, new ExistingFileHelper.ResourceType(PackType.CLIENT_RESOURCES, ".png", "textures"))) {
-                    end = new ResourceLocation(key(block).getNamespace(), ModelProvider.BLOCK_FOLDER + "/" + folder + "/smooth_" + name(registry.getBase()));
+                    end = ResourceLocation.fromNamespaceAndPath(key(block).getNamespace(), ModelProvider.BLOCK_FOLDER + "/" + folder + "/smooth_" + name(registry.getBase()));
                 }
                 if (!exFileHelper.exists(end, new ExistingFileHelper.ResourceType(PackType.CLIENT_RESOURCES, ".png", "textures"))) {
-                    end = new ResourceLocation(key(block).getNamespace(), ModelProvider.BLOCK_FOLDER + "/" + folder + "/smooth_" + name(registry.getBase()));
+                    end = ResourceLocation.fromNamespaceAndPath(key(block).getNamespace(), ModelProvider.BLOCK_FOLDER + "/" + folder + "/smooth_" + name(registry.getBase()));
                 }
                 if (registry.getCustomBase().isPresent() && "borderless_bricks".equals(registry.getCustomBase().get())) {
-                    end = new ResourceLocation(key(block).getNamespace(), ModelProvider.BLOCK_FOLDER + "/" + folder + "/polished_borderless_bricks");
+                    end = ResourceLocation.fromNamespaceAndPath(key(block).getNamespace(), ModelProvider.BLOCK_FOLDER + "/" + folder + "/polished_borderless_bricks");
                 }
                 simpleBlock(block, models().getBuilder(name(block))
-                    .parent(models().getExistingFile(new ResourceLocation("block/cube_column")))
+                    .parent(models().getExistingFile(ResourceLocation.withDefaultNamespace("block/cube_column")))
                     .texture("side", side)
                     .texture("end", end)
                     .texture("particle", side));
@@ -445,7 +445,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     private void createCarpetSet(ResourcefulRegistry<Block> registry, String folder) {
-        createSet(registry, (block, i) -> simpleBlock(block, models().carpet(name(block), new ResourceLocation(Chipped.MOD_ID, customTexture(block, folder).getPath().replace("_carpet", "_wool")))));
+        createSet(registry, (block, i) -> simpleBlock(block, models().carpet(name(block), ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, customTexture(block, folder).getPath().replace("_carpet", "_wool")))));
     }
 
     private void createDriedKelpSet(ResourcefulRegistry<Block> registry, String folder) {
@@ -459,7 +459,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 .texture("east", texture)
                 .texture("south", texture)
                 .texture("west", texture)
-                .parent(models().getExistingFile(new ResourceLocation("block/dried_kelp_block"))));
+                .parent(models().getExistingFile(ResourceLocation.withDefaultNamespace("block/dried_kelp_block"))));
         });
     }
 
@@ -469,7 +469,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
             simpleBlock(block, models().getBuilder(name(block))
                 .texture("particle", texture)
                 .texture("texture", texture)
-                .parent(models().getExistingFile(new ResourceLocation("block/lily_pad"))));
+                .parent(models().getExistingFile(ResourceLocation.withDefaultNamespace("block/lily_pad"))));
         });
     }
 
@@ -484,13 +484,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         createSet(registry, (block, i) -> {
             ResourceLocation texture = customTexture(block, folder);
             if (texture.getPath().contains("nether")) {
-                createCarvedPumpkinBlock(block, folder, new ResourceLocation(Chipped.MOD_ID, "block/pumpkin/nether_pumpkin_top"), new ResourceLocation(Chipped.MOD_ID, "block/pumpkin/nether_pumpkin_bottom"), new ResourceLocation(Chipped.MOD_ID, "block/pumpkin/nether_pumpkin_side"));
+                createCarvedPumpkinBlock(block, folder, ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "block/pumpkin/nether_pumpkin_top"), ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "block/pumpkin/nether_pumpkin_bottom"), ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "block/pumpkin/nether_pumpkin_side"));
             } else if (texture.getPath().contains("end_purple")) {
-                createCarvedPumpkinBlock(block, folder, new ResourceLocation(Chipped.MOD_ID, "block/pumpkin/end_pumpkin_purple_top"), new ResourceLocation(Chipped.MOD_ID, "block/pumpkin/end_pumpkin_purple_bottom"), new ResourceLocation(Chipped.MOD_ID, "block/pumpkin/end_pumpkin_purple_side"));
+                createCarvedPumpkinBlock(block, folder, ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "block/pumpkin/end_pumpkin_purple_top"), ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "block/pumpkin/end_pumpkin_purple_bottom"), ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "block/pumpkin/end_pumpkin_purple_side"));
             } else if (texture.getPath().contains("end")) {
-                createCarvedPumpkinBlock(block, folder, new ResourceLocation(Chipped.MOD_ID, "block/pumpkin/end_pumpkin_top"), new ResourceLocation(Chipped.MOD_ID, "block/pumpkin/end_pumpkin_bottom"), new ResourceLocation(Chipped.MOD_ID, "block/pumpkin/end_pumpkin_side"));
+                createCarvedPumpkinBlock(block, folder, ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "block/pumpkin/end_pumpkin_top"), ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "block/pumpkin/end_pumpkin_bottom"), ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "block/pumpkin/end_pumpkin_side"));
             } else {
-                createCarvedPumpkinBlock(block, folder, new ResourceLocation("block/pumpkin_top"), new ResourceLocation("block/pumpkin_top"), new ResourceLocation("block/pumpkin_side"));
+                createCarvedPumpkinBlock(block, folder, ResourceLocation.withDefaultNamespace("block/pumpkin_top"), ResourceLocation.withDefaultNamespace("block/pumpkin_top"), ResourceLocation.withDefaultNamespace("block/pumpkin_side"));
             }
         });
     }
@@ -505,7 +505,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
             .texture("south", side)
             .texture("up", top)
             .texture("west", side)
-            .parent(models().getExistingFile(new ResourceLocation("block/cube")));
+            .parent(models().getExistingFile(ResourceLocation.withDefaultNamespace("block/cube")));
 
         getVariantBuilder(block)
             .forAllStates(state -> {
@@ -530,16 +530,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
             ResourceLocation texture = customTexture(block, folder);
             BlockModelBuilder model = models().getBuilder(name(block))
                 .texture("torch", texture)
-                .parent(models().getExistingFile(new ResourceLocation("block/template_torch")));
+                .parent(models().getExistingFile(ResourceLocation.withDefaultNamespace("block/template_torch")));
 
             simpleBlock(block, model);
         });
 
         createSet(registry.getSecond(), (block, i) -> {
-            ResourceLocation texture = new ResourceLocation(Chipped.MOD_ID, customTexture(block, folder).getPath().replace("_wall", ""));
+            ResourceLocation texture = ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, customTexture(block, folder).getPath().replace("_wall", ""));
             BlockModelBuilder model = models().getBuilder(name(block))
                 .texture("torch", texture)
-                .parent(models().getExistingFile(new ResourceLocation("block/template_torch_wall")));
+                .parent(models().getExistingFile(ResourceLocation.withDefaultNamespace("block/template_torch_wall")));
 
 
             getVariantBuilder(block)
@@ -558,13 +558,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
             ResourceLocation texture1 = customTexture(block, folder);
             BlockModelBuilder model1 = models().getBuilder(name(block))
                 .texture("torch", texture1)
-                .parent(models().getExistingFile(new ResourceLocation("block/template_torch")));
+                .parent(models().getExistingFile(ResourceLocation.withDefaultNamespace("block/template_torch")));
 
 
             ResourceLocation texture2 = customTexture(block, folder);
             BlockModelBuilder model2 = models().getBuilder(name(block))
                 .texture("torch", texture2)
-                .parent(models().getExistingFile(new ResourceLocation("block/template_torch")));
+                .parent(models().getExistingFile(ResourceLocation.withDefaultNamespace("block/template_torch")));
 
             getVariantBuilder(block)
                 .forAllStates(state -> ConfiguredModel.builder()
@@ -573,14 +573,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
         });
 
         createSet(registry.getSecond(), (block, i) -> {
-            ResourceLocation texture = new ResourceLocation(Chipped.MOD_ID, customTexture(block, folder).getPath().replace("_wall", ""));
+            ResourceLocation texture = ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, customTexture(block, folder).getPath().replace("_wall", ""));
             BlockModelBuilder model1 = models().getBuilder(name(block))
                 .texture("torch", extend(texture, "_on"))
-                .parent(models().getExistingFile(new ResourceLocation("block/template_torch_wall")));
+                .parent(models().getExistingFile(ResourceLocation.withDefaultNamespace("block/template_torch_wall")));
 
             BlockModelBuilder model2 = models().getBuilder(name(block))
                 .texture("torch", texture)
-                .parent(models().getExistingFile(new ResourceLocation("block/template_torch_wall")));
+                .parent(models().getExistingFile(ResourceLocation.withDefaultNamespace("block/template_torch_wall")));
 
             getVariantBuilder(block)
                 .forAllStates(state -> {
@@ -596,7 +596,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void createLadderSet(ResourcefulRegistry<Block> registry, String folder) {
         createSet(registry, -1, false, (block, i) -> {
 
-            BlockModelBuilder model = createChildModel(block, new ResourceLocation("block/ladder"), customTexture(block, folder), "texture", folder);
+            BlockModelBuilder model = createChildModel(block, ResourceLocation.withDefaultNamespace("block/ladder"), customTexture(block, folder), "texture", folder);
 
             getVariantBuilder(block)
                 .forAllStates(state -> {
@@ -611,14 +611,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private void createGlazedTerracotta(ResourcefulRegistry<Block> registry, String folder) {
         createSet(registry, (block, i) -> {
-            BlockModelBuilder model = createChildModel(block, new ResourceLocation("block/template_glazed_terracotta"), customTexture(block, folder), "pattern", folder);
+            BlockModelBuilder model = createChildModel(block, ResourceLocation.withDefaultNamespace("block/template_glazed_terracotta"), customTexture(block, folder), "pattern", folder);
             horizontalBlock(block, model);
         });
     }
 
     private void createRootSet(ResourcefulRegistry<Block> registry, String folder) {
         createSet(registry, (block, i) -> {
-            BlockModelBuilder model = models().getBuilder(name(block)).texture("side", customTexture(block, folder)).texture("top", extend(customTexture(block, folder), "_top")).parent(models().getExistingFile(new ResourceLocation("block/mangrove_roots")));
+            BlockModelBuilder model = models().getBuilder(name(block)).texture("side", customTexture(block, folder)).texture("top", extend(customTexture(block, folder), "_top")).parent(models().getExistingFile(ResourceLocation.withDefaultNamespace("block/mangrove_roots")));
             simpleBlock(block, model);
         });
     }
@@ -641,8 +641,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         createSet(registry, (block, i) -> {
 
             boolean isCrate = blockTexture(block).getPath().contains("crate");
-            ModelFile model = models().getBuilder(name(block)).texture("bottom", extend(customTexture(block, folder), isCrate ? "_top" : "_bottom")).texture("side", extend(customTexture(block, folder), "_side")).texture("top", extend(customTexture(block, folder), "_top")).parent(models().getExistingFile(new ResourceLocation("block/cube_bottom_top")));
-            ModelFile openModel = isCrate ? model : models().getBuilder(name(block) + "_open").texture("bottom", extend(customTexture(block, folder), "_bottom")).texture("side", extend(customTexture(block, folder), "_side")).texture("top", extend(customTexture(block, folder), "_top_open")).parent(models().getExistingFile(new ResourceLocation("block/cube_bottom_top")));
+            ModelFile model = models().getBuilder(name(block)).texture("bottom", extend(customTexture(block, folder), isCrate ? "_top" : "_bottom")).texture("side", extend(customTexture(block, folder), "_side")).texture("top", extend(customTexture(block, folder), "_top")).parent(models().getExistingFile(ResourceLocation.withDefaultNamespace("block/cube_bottom_top")));
+            ModelFile openModel = isCrate ? model : models().getBuilder(name(block) + "_open").texture("bottom", extend(customTexture(block, folder), "_bottom")).texture("side", extend(customTexture(block, folder), "_side")).texture("top", extend(customTexture(block, folder), "_top_open")).parent(models().getExistingFile(ResourceLocation.withDefaultNamespace("block/cube_bottom_top")));
 
             getVariantBuilder(block)
                 .forAllStates(state -> {
@@ -683,7 +683,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void createGlassPaneSet(ChippedPaletteRegistry<Block> registry, String folder) {
         final String id = registry.getCustomBase().orElse(BuiltInRegistries.BLOCK.getKey(registry.getBase()).getPath());
         for (var entry : registry.getPalette().ids()) {
-            final var blockId = new ResourceLocation(Chipped.MOD_ID, entry.getSecond().replace("%", id));
+            final var blockId = ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, entry.getSecond().replace("%", id));
             final var block = BuiltInRegistries.BLOCK.get(blockId);
 
             final var pane = blockId.getPath().replace("_pane", "");
@@ -695,9 +695,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 } else {
                     paneTopTexture = extend(blockTexture(Blocks.GLASS_PANE), "_top");
                 }
-                paneBlock((IronBarsBlock) block, pane, new ResourceLocation(Chipped.MOD_ID, customTexture(block, folder).getPath().replace("_pane", "")), paneTopTexture);
+                paneBlock((IronBarsBlock) block, pane, ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, customTexture(block, folder).getPath().replace("_pane", "")), paneTopTexture);
             } else {
-                final var iddahdahdahblahblahblah = new ResourceLocation(Chipped.MOD_ID, "block/" + id.replace("_pane", "") + "/" + pane);
+                final var iddahdahdahblahblahblah = ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "block/" + id.replace("_pane", "") + "/" + pane);
                 simpleBlock(block, models().cubeAll(blockId.getPath(), iddahdahdahblahblahblah));
                 itemModels().getBuilder(blockId.toString())
                     .parent(new ModelFile.UncheckedModelFile("item/generated"))
@@ -743,7 +743,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     public ResourceLocation customTexture(Block block, String folder) {
         ResourceLocation name = key(block);
-        return new ResourceLocation(name.getNamespace(), ModelProvider.BLOCK_FOLDER + "/" + folder + "/" + name.getPath());
+        return ResourceLocation.fromNamespaceAndPath(name.getNamespace(), ModelProvider.BLOCK_FOLDER + "/" + folder + "/" + name.getPath());
     }
 
     private String name(Block block) {
@@ -755,7 +755,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     private ResourceLocation extend(ResourceLocation rl, String suffix) {
-        return new ResourceLocation(rl.getNamespace(), rl.getPath() + suffix);
+        return ResourceLocation.fromNamespaceAndPath(rl.getNamespace(), rl.getPath() + suffix);
     }
 
     private BlockModelBuilder createChildModel(Block block, ResourceLocation parent, ResourceLocation texture, String textureName, String folder) {

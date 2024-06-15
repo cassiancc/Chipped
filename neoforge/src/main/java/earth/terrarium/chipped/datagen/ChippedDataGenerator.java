@@ -9,12 +9,13 @@ import earth.terrarium.chipped.datagen.provider.server.ModLootTableProvider;
 import earth.terrarium.chipped.datagen.provider.server.ModRecipeProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DataProvider;
+import net.minecraft.data.PackOutput;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
-@Mod.EventBusSubscriber(modid = Chipped.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = Chipped.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public final class ChippedDataGenerator {
 
     @SubscribeEvent
@@ -22,8 +23,7 @@ public final class ChippedDataGenerator {
         DataGenerator generator = event.getGenerator();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
-        // Client
-        var packOutput = generator.getPackOutput();
+        PackOutput packOutput = generator.getPackOutput();
         ModBlockStateProvider stateProvider = new ModBlockStateProvider(packOutput, existingFileHelper);
         addProvider(generator, event.includeClient(), stateProvider);
         addProvider(generator, event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
@@ -32,14 +32,13 @@ public final class ChippedDataGenerator {
         generator.addProvider(event.includeClient(), textures);
         addProvider(generator, event.includeClient(), new ModCtmModelProvider(packOutput, stateProvider, textures));
 
-        // Server
         var lookupProvider = event.getLookupProvider();
         ModBlockTagProvider blockTags = new ModBlockTagProvider(packOutput, lookupProvider, existingFileHelper);
         addProvider(generator, event.includeServer(), blockTags);
         addProvider(generator, event.includeServer(), new ModItemTagProvider(packOutput, lookupProvider, blockTags.contentsGetter(), existingFileHelper));
 
-        addProvider(generator, event.includeServer(), new ModLootTableProvider(packOutput));
-        addProvider(generator, event.includeServer(), new ModRecipeProvider(packOutput));
+        addProvider(generator, event.includeServer(), new ModLootTableProvider(packOutput, lookupProvider));
+        addProvider(generator, event.includeServer(), new ModRecipeProvider(packOutput, lookupProvider));
     }
 
     private static void addProvider(DataGenerator generator, boolean condition, DataProvider provider) {

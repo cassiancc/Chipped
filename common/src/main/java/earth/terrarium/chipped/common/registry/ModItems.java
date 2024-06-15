@@ -1,6 +1,6 @@
 package earth.terrarium.chipped.common.registry;
 
-import com.teamresourceful.resourcefullib.common.item.tabs.ResourcefulCreativeTab;
+import com.teamresourceful.resourcefullib.common.item.tabs.ResourcefulCreativeModeTab;
 import com.teamresourceful.resourcefullib.common.registry.RegistryEntry;
 import com.teamresourceful.resourcefullib.common.registry.ResourcefulRegistries;
 import com.teamresourceful.resourcefullib.common.registry.ResourcefulRegistry;
@@ -14,16 +14,15 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
 import java.util.function.BiFunction;
-import java.util.function.Supplier;
 
 public class ModItems {
     public static final ResourcefulRegistry<Item> ITEMS = ResourcefulRegistries.create(BuiltInRegistries.ITEM, Chipped.MOD_ID);
     public static final ResourcefulRegistry<Item> BENCHES = ResourcefulRegistries.create(ITEMS);
-
-    public static final Supplier<CreativeModeTab> ITEM_GROUP = new ResourcefulCreativeTab(new ResourceLocation(Chipped.MOD_ID, "main"))
-        .setItemIcon(ModBlocks.BOTANIST_WORKBENCH)
+    public static final ResourcefulRegistry<CreativeModeTab> TABS = ResourcefulRegistries.create(BuiltInRegistries.CREATIVE_MODE_TAB, Chipped.MOD_ID);
+    public static final RegistryEntry<CreativeModeTab> TAB = TABS.register("main", () -> new ResourcefulCreativeModeTab(ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "main"))
+        .setItemIcon(() -> ModItems.BOTANIST_WORKBENCH.get())
         .addRegistry(ITEMS)
-        .build();
+        .build());
 
     public static final RegistryEntry<Item> BOTANIST_WORKBENCH = BENCHES.register("botanist_workbench", () -> new BlockItem(ModBlocks.BOTANIST_WORKBENCH.get(), new Item.Properties()));
     public static final RegistryEntry<Item> GLASSBLOWER = BENCHES.register("glassblower", () -> new BlockItem(ModBlocks.GLASSBLOWER.get(), new Item.Properties()));

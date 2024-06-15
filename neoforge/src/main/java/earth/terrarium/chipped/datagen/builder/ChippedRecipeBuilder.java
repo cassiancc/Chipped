@@ -34,6 +34,6 @@ public class ChippedRecipeBuilder extends CodecRecipeBuilder {
             .requirements(AdvancementRequirements.Strategy.OR);
         criteria.forEach(builder::addCriterion);
         recipeOutput.accept(id, recipe, builder
-            .build(new ResourceLocation(id.getNamespace(), "recipes/workbench/" + id.getPath())));
+            .build(ResourceLocation.fromNamespaceAndPath(id.getNamespace(), "recipes/workbench/" + id.getPath())));
     }
 }

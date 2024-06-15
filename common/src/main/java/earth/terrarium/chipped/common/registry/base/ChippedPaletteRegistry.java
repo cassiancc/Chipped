@@ -1,5 +1,6 @@
 package earth.terrarium.chipped.common.registry.base;
 
+import com.teamresourceful.resourcefullib.common.registry.HolderRegistryEntry;
 import com.teamresourceful.resourcefullib.common.registry.RegistryEntry;
 import com.teamresourceful.resourcefullib.common.registry.ResourcefulRegistry;
 import earth.terrarium.chipped.common.palette.Palette;
@@ -31,6 +32,11 @@ public class ChippedPaletteRegistry<T> implements ResourcefulRegistry<T> {
     @Override
     public <I extends T> RegistryEntry<I> register(String id, Supplier<I> supplier) {
         return registry.register(id, supplier);
+    }
+
+    @Override
+    public HolderRegistryEntry<T> registerHolder(String id, Supplier<T> supplier) {
+        return registry.registerHolder(id, supplier);
     }
 
     @Override

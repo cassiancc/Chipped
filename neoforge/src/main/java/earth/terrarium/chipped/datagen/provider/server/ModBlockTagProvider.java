@@ -30,13 +30,13 @@ import java.util.stream.Stream;
 
 public class ModBlockTagProvider extends BlockTagsProvider {
 
-    public static final TagKey<Item> ALCHEMY_BENCH_TAG = TagKey.create(Registries.ITEM, new ResourceLocation(Chipped.MOD_ID, "alchemy_bench"));
-    public static final TagKey<Item> BOTANIST_WORKBENCH_TAG = TagKey.create(Registries.ITEM, new ResourceLocation(Chipped.MOD_ID, "botanist_workbench"));
-    public static final TagKey<Item> CARPENTERS_TABLE_TAG = TagKey.create(Registries.ITEM, new ResourceLocation(Chipped.MOD_ID, "carpenters_table"));
-    public static final TagKey<Item> GLASSBLOWER_TAG = TagKey.create(Registries.ITEM, new ResourceLocation(Chipped.MOD_ID, "glassblower"));
-    public static final TagKey<Item> LOOM_TABLE_TAG = TagKey.create(Registries.ITEM, new ResourceLocation(Chipped.MOD_ID, "loom_table"));
-    public static final TagKey<Item> MASON_TABLE_TAG = TagKey.create(Registries.ITEM, new ResourceLocation(Chipped.MOD_ID, "mason_table"));
-    public static final TagKey<Item> TINKERING_TABLE_TAG = TagKey.create(Registries.ITEM, new ResourceLocation(Chipped.MOD_ID, "tinkering_table"));
+    public static final TagKey<Item> ALCHEMY_BENCH_TAG = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "alchemy_bench"));
+    public static final TagKey<Item> BOTANIST_WORKBENCH_TAG = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "botanist_workbench"));
+    public static final TagKey<Item> CARPENTERS_TABLE_TAG = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "carpenters_table"));
+    public static final TagKey<Item> GLASSBLOWER_TAG = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "glassblower"));
+    public static final TagKey<Item> LOOM_TABLE_TAG = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "loom_table"));
+    public static final TagKey<Item> MASON_TABLE_TAG = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "mason_table"));
+    public static final TagKey<Item> TINKERING_TABLE_TAG = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "tinkering_table"));
 
     public ModBlockTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
         super(output, lookupProvider, Chipped.MOD_ID, existingFileHelper);
@@ -475,11 +475,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     }
 
     private void createSet(Block block, Collection<RegistryEntry<Block>> registry, String tag, TagKey<Item> workbench, @Nullable TagKey<Block> mineable) {
-        createSet(block, registry, new ResourceLocation(Chipped.MOD_ID, tag), mineable);
+        createSet(block, registry, ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, tag), mineable);
     }
 
     private void createSet(Block block, ResourcefulRegistry<Block> registry, String tag, TagKey<Item> workbench, @Nullable TagKey<Block> mineableTag) {
-        createSet(block, registry.getEntries(), new ResourceLocation(Chipped.MOD_ID, tag), mineableTag);
+        createSet(block, registry.getEntries(), ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, tag), mineableTag);
     }
 
     private void createSet(Block block, Collection<RegistryEntry<Block>> registry, ResourceLocation tag, @Nullable TagKey<Block> mineableTag) {

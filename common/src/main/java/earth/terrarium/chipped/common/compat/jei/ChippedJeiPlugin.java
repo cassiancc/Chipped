@@ -20,7 +20,7 @@ public class ChippedJeiPlugin implements IModPlugin {
 
     @Override
     public @NotNull ResourceLocation getPluginUid() {
-        return new ResourceLocation(Chipped.MOD_ID, "jei");
+        return ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "jei");
     }
 
     @Override

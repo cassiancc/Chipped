@@ -2,11 +2,9 @@ package earth.terrarium.chipped.common.blocks;
 
 import com.mojang.serialization.MapCodec;
 import earth.terrarium.chipped.common.menus.WorkbenchMenuProvider;
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.StringRepresentable;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -19,13 +17,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Locale;
 
-@MethodsReturnNonnullByDefault
-@SuppressWarnings("deprecation")
 public class WorkbenchBlock extends HorizontalDirectionalBlock {
     public static final MapCodec<WorkbenchBlock> CODEC = simpleCodec(WorkbenchBlock::new);
 
@@ -49,7 +44,7 @@ public class WorkbenchBlock extends HorizontalDirectionalBlock {
     }
 
     @Override
-    public @NotNull InteractionResult use(@NotNull BlockState state, Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull InteractionHand handIn, @NotNull BlockHitResult hit) {
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         player.openMenu(new WorkbenchMenuProvider(getName()));
         return InteractionResult.sidedSuccess(level.isClientSide);
     }

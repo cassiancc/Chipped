@@ -11,6 +11,7 @@ public class Chipped {
 
         ModBlocks.BLOCKS.init();
         ModItems.ITEMS.init();
+        ModItems.TABS.init();
         ModMenuTypes.MENUS.init();
         ModRecipeTypes.RECIPE_TYPES.init();
         ModRecipeSerializers.RECIPE_SERIALIZERS.init();

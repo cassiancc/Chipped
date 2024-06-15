@@ -31,7 +31,7 @@ public record ServerboundCraftPacket(
         public Type() {
             super(
                 ServerboundCraftPacket.class,
-                new ResourceLocation(Chipped.MOD_ID, "craft"),
+                ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "craft"),
                 ObjectByteCodec.create(
                     ExtraByteCodecs.ITEM_STACK.fieldOf(ServerboundCraftPacket::stack),
                     ByteCodec.BOOLEAN.fieldOf(ServerboundCraftPacket::replaceAll),

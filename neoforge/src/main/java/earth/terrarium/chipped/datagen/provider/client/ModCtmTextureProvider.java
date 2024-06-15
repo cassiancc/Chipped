@@ -181,11 +181,11 @@ public class ModCtmTextureProvider implements DataProvider {
                 final String id = registry.getCustomBase().orElse(BuiltInRegistries.BLOCK.getKey(registry.getBase()).getPath());
                 for (var ctm : registry.getPalette().getSpecial()) {
                     final String suffix = ctm.getFirst().suffix().length() > 0 ? "_" + ctm.getFirst().suffix() : "";
-                    final ResourceLocation location = new ResourceLocation(Chipped.MOD_ID, "textures/block/" + id + "/ctm/" + ctm.getSecond().replace("%", id) + suffix);
+                    final ResourceLocation location = ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "textures/block/" + id + "/ctm/" + ctm.getSecond().replace("%", id) + suffix);
                     try {
-                        Resource resource = files.getResource(new ResourceLocation(location.getNamespace(), location.getPath() + ".png"), PackType.CLIENT_RESOURCES);
+                        Resource resource = files.getResource(ResourceLocation.fromNamespaceAndPath(location.getNamespace(), location.getPath() + ".png"), PackType.CLIENT_RESOURCES);
 
-                        split(new ResourceLocation(location.getNamespace(), "block/" + id + "/ctm/"), ctm.getSecond().replace("%", id) + suffix, resource, output)
+                        split(ResourceLocation.fromNamespaceAndPath(location.getNamespace(), "block/" + id + "/ctm/"), ctm.getSecond().replace("%", id) + suffix, resource, output)
                             .forEach((key, value) ->
                                 images.computeIfAbsent(key, data -> new ArrayList<>()).addAll(value)
                             );
@@ -217,7 +217,7 @@ public class ModCtmTextureProvider implements DataProvider {
                             output.writeIfNeeded(path, entry.getKey().bytes(), entry.getKey().code());
                             files.trackGenerated(newPath, TEXTURE);
                             for (ResourceLocation resourceLocation : entry.getValue()) {
-                                ResourceLocation key = new ResourceLocation(resourceLocation.getNamespace(), resourceLocation.getPath().substring(0, resourceLocation.getPath().length() - 4));
+                                ResourceLocation key = ResourceLocation.fromNamespaceAndPath(resourceLocation.getNamespace(), resourceLocation.getPath().substring(0, resourceLocation.getPath().length() - 4));
                                 commons.put(key, newPath);
                             }
                             commonIndex++;
@@ -303,7 +303,7 @@ public class ModCtmTextureProvider implements DataProvider {
     }
 
     public String getTexture(String texture) {
-        ResourceLocation location = new ResourceLocation(texture);
+        ResourceLocation location = ResourceLocation.withDefaultNamespace(texture);
         return this.commonTextures.getOrDefault(location, location).toString();
     }
 }

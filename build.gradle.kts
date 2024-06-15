@@ -153,7 +153,7 @@ subprojects {
         }
         repositories {
             maven {
-                setUrl("https://maven.teamresourceful.com/repository/terrarium/")
+                setUrl("https://maven.resourcefulbees.com/repository/terrarium/")
                 credentials {
                     username = System.getenv("MAVEN_USER")
                     password = System.getenv("MAVEN_PASS")

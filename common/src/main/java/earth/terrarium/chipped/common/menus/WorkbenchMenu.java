@@ -2,15 +2,15 @@ package earth.terrarium.chipped.common.menus;
 
 import earth.terrarium.chipped.common.registry.ModMenuTypes;
 import earth.terrarium.chipped.common.registry.ModRecipeTypes;
-import net.minecraft.Util;
+import net.minecraft.util.StringUtil;
 import net.minecraft.world.Container;
-import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ClickType;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.CraftingInput;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -85,13 +85,13 @@ public class WorkbenchMenu extends AbstractContainerMenu {
     public void updateResults(@Nullable String filter) {
         if (selectedStack.isEmpty()) return;
         this.filter = filter;
-        SimpleContainer container = new SimpleContainer(selectedStack);
+        CraftingInput craftingInput = CraftingInput.of(1, 1, List.of(selectedStack));
         level.getRecipeManager()
-            .getRecipeFor(ModRecipeTypes.WORKBENCH.get(), container, level).ifPresentOrElse(recipe -> {
+            .getRecipeFor(ModRecipeTypes.WORKBENCH.get(), craftingInput, level).ifPresentOrElse(recipe -> {
                 results.clear();
-                recipe.value().getResults(container.getItem(0)).forEach(result -> {
+                recipe.value().getResults(craftingInput.getItem(0)).forEach(result -> {
                     if (filter == null
-                        || Util.isBlank(filter)
+                        || StringUtil.isBlank(filter)
                         || result.getDisplayName().getString().toLowerCase(Locale.ROOT).contains(filter.toLowerCase(Locale.ROOT))) {
                         results.add(result);
                     }

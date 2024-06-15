@@ -2,6 +2,8 @@ package earth.terrarium.chipped.mixins;
 
 import earth.terrarium.chipped.Chipped;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
@@ -37,8 +39,8 @@ public abstract class BlockBehaviourMixin {
         if (((Object) this) instanceof Block block) {
             final var blockId = BuiltInRegistries.BLOCK.getKey(block);
             if (blockId.getNamespace().equals(Chipped.MOD_ID)) {
-                final var id = new ResourceLocation(blockId.getNamespace(), "blocks/" + blockId.getPath());
-                final var table = builder.getLevel().getServer().getLootData().getLootTable(id);
+                final var id = ResourceLocation.fromNamespaceAndPath(blockId.getNamespace(), "blocks/" + blockId.getPath());
+                final var table = builder.getLevel().getServer().reloadableRegistries().getLootTable(ResourceKey.create(Registries.LOOT_TABLE, id));
                 if (table != LootTable.EMPTY) {
                     final LootParams context = builder.withParameter(LootContextParams.BLOCK_STATE, state).create(LootContextParamSets.BLOCK);
                     cir.setReturnValue(table.getRandomItems(context));

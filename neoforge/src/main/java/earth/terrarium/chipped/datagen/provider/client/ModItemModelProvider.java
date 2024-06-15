@@ -90,7 +90,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     private void createBlockSet(ResourcefulRegistry<Block> registry, String folder, String replace) {
         List<Block> blocks = registry.stream().map(RegistryEntry::get).toList();
         for (Block block : blocks) {
-            basicBlockItem(block, new ResourceLocation(Chipped.MOD_ID, Objects.requireNonNull(BuiltInRegistries.BLOCK.getKey(block)).getPath().replace(replace, "")), folder);
+            basicBlockItem(block, ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, Objects.requireNonNull(BuiltInRegistries.BLOCK.getKey(block)).getPath().replace(replace, "")), folder);
         }
     }
 
@@ -118,6 +118,6 @@ public class ModItemModelProvider extends ItemModelProvider {
     }
 
     public ResourceLocation customTexture(ResourceLocation name, String folder, boolean blockFolder) {
-        return new ResourceLocation(name.getNamespace(), (blockFolder ? ModelProvider.BLOCK_FOLDER : ModelProvider.ITEM_FOLDER) + "/" + folder + "/" + name.getPath());
+        return ResourceLocation.fromNamespaceAndPath(name.getNamespace(), (blockFolder ? ModelProvider.BLOCK_FOLDER : ModelProvider.ITEM_FOLDER) + "/" + folder + "/" + name.getPath());
     }
 }

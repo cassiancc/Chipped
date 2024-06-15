@@ -31,31 +31,31 @@ import java.util.List;
 import java.util.Objects;
 
 public class WorkbenchScreen extends AbstractContainerCursorScreen<WorkbenchMenu> {
-    private static final ResourceLocation TEXTURE = new ResourceLocation(Chipped.MOD_ID, "textures/gui/container/workbench.png");
+    private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "textures/gui/container/workbench.png");
 
     public static final WidgetSprites SINGLE_BLOCK_BUTTON_SPRITES = new WidgetSprites(
-        new ResourceLocation(Chipped.MOD_ID, "single_block_button"),
-        new ResourceLocation(Chipped.MOD_ID, "single_block_button_highlighted")
+        ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "single_block_button"),
+        ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "single_block_button_highlighted")
     );
 
     public static final WidgetSprites HORIZONTAL_BLOCKS_BUTTON_SPRITES = new WidgetSprites(
-        new ResourceLocation(Chipped.MOD_ID, "horizontal_blocks_button"),
-        new ResourceLocation(Chipped.MOD_ID, "horizontal_blocks_button_highlighted")
+        ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "horizontal_blocks_button"),
+        ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "horizontal_blocks_button_highlighted")
     );
 
     public static final WidgetSprites VERTICAL_BLOCKS_BUTTON_SPRITES = new WidgetSprites(
-        new ResourceLocation(Chipped.MOD_ID, "vertical_blocks_button"),
-        new ResourceLocation(Chipped.MOD_ID, "vertical_blocks_button_highlighted")
+        ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "vertical_blocks_button"),
+        ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "vertical_blocks_button_highlighted")
     );
 
     public static final WidgetSprites TWO_BY_TWO_BUTTON_SPRITES = new WidgetSprites(
-        new ResourceLocation(Chipped.MOD_ID, "two_by_two_button"),
-        new ResourceLocation(Chipped.MOD_ID, "two_by_two_button_highlighted")
+        ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "two_by_two_button"),
+        ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "two_by_two_button_highlighted")
     );
 
     public static final WidgetSprites BUTTON_SPRITES = new WidgetSprites(
-        new ResourceLocation(Chipped.MOD_ID, "button"),
-        new ResourceLocation(Chipped.MOD_ID, "button_highlighted")
+        ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "button"),
+        ResourceLocation.fromNamespaceAndPath(Chipped.MOD_ID, "button_highlighted")
     );
 
     public static final int YELLOW = 0x70FFFF00;
