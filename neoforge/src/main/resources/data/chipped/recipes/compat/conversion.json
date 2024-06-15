@@ -7,91 +7,91 @@
                     "type": "neoforge:not",
                     "value": {
                         "type": "neoforge:tag_empty",
-                        "tag": "forge:storage_blocks/aluminum"
+                        "tag": "c:storage_blocks/aluminum"
                     }
                 },
                 {
                     "type": "neoforge:not",
                     "value": {
                         "type": "neoforge:tag_empty",
-                        "tag": "forge:storage_blocks/bronze"
+                        "tag": "c:storage_blocks/bronze"
                     }
                 },
                 {
                     "type": "neoforge:not",
                     "value": {
                         "type": "neoforge:tag_empty",
-                        "tag": "forge:storage_blocks/charcoal"
+                        "tag": "c:storage_blocks/charcoal"
                     }
                 },
                 {
                     "type": "neoforge:not",
                     "value": {
                         "type": "neoforge:tag_empty",
-                        "tag": "forge:storage_blocks/cobalt"
+                        "tag": "c:storage_blocks/cobalt"
                     }
                 },
                 {
                     "type": "neoforge:not",
                     "value": {
                         "type": "neoforge:tag_empty",
-                        "tag": "forge:storage_blocks/electrum"
+                        "tag": "c:storage_blocks/electrum"
                     }
                 },
                 {
                     "type": "neoforge:not",
                     "value": {
                         "type": "neoforge:tag_empty",
-                        "tag": "forge:storage_blocks/invar"
+                        "tag": "c:storage_blocks/invar"
                     }
                 },
                 {
                     "type": "neoforge:not",
                     "value": {
                         "type": "neoforge:tag_empty",
-                        "tag": "forge:storage_blocks/lead"
+                        "tag": "c:storage_blocks/lead"
                     }
                 },
                 {
                     "type": "neoforge:not",
                     "value": {
                         "type": "neoforge:tag_empty",
-                        "tag": "forge:storage_blocks/nickel"
+                        "tag": "c:storage_blocks/nickel"
                     }
                 },
                 {
                     "type": "neoforge:not",
                     "value": {
                         "type": "neoforge:tag_empty",
-                        "tag": "forge:storage_blocks/platinum"
+                        "tag": "c:storage_blocks/platinum"
                     }
                 },
                 {
                     "type": "neoforge:not",
                     "value": {
                         "type": "neoforge:tag_empty",
-                        "tag": "forge:storage_blocks/silver"
+                        "tag": "c:storage_blocks/silver"
                     }
                 },
                 {
                     "type": "neoforge:not",
                     "value": {
                         "type": "neoforge:tag_empty",
-                        "tag": "forge:storage_blocks/steel"
+                        "tag": "c:storage_blocks/steel"
                     }
                 },
                 {
                     "type": "neoforge:not",
                     "value": {
                         "type": "neoforge:tag_empty",
-                        "tag": "forge:storage_blocks/tin"
+                        "tag": "c:storage_blocks/tin"
                     }
                 },
                 {
                     "type": "neoforge:not",
                     "value": {
                         "type": "neoforge:tag_empty",
-                        "tag": "forge:storage_blocks/zinc"
+                        "tag": "c:storage_blocks/zinc"
                     }
                 }
             ]
@@ -100,43 +100,43 @@
     "type": "chipped:workbench",
     "ingredients": [
         {
-            "tag": "forge:storage_blocks/aluminum"
+            "tag": "c:storage_blocks/aluminum"
         },
         {
-            "tag": "forge:storage_blocks/bronze"
+            "tag": "c:storage_blocks/bronze"
         },
         {
-            "tag": "forge:storage_blocks/charcoal"
+            "tag": "c:storage_blocks/charcoal"
         },
         {
-            "tag": "forge:storage_blocks/cobalt"
+            "tag": "c:storage_blocks/cobalt"
         },
         {
-            "tag": "forge:storage_blocks/electrum"
+            "tag": "c:storage_blocks/electrum"
         },
         {
-            "tag": "forge:storage_blocks/invar"
+            "tag": "c:storage_blocks/invar"
         },
         {
-            "tag": "forge:storage_blocks/lead"
+            "tag": "c:storage_blocks/lead"
         },
         {
-            "tag": "forge:storage_blocks/nickel"
+            "tag": "c:storage_blocks/nickel"
         },
         {
-            "tag": "forge:storage_blocks/platinum"
+            "tag": "c:storage_blocks/platinum"
         },
         {
-            "tag": "forge:storage_blocks/silver"
+            "tag": "c:storage_blocks/silver"
         },
         {
-            "tag": "forge:storage_blocks/steel"
+            "tag": "c:storage_blocks/steel"
         },
         {
-            "tag": "forge:storage_blocks/tin"
+            "tag": "c:storage_blocks/tin"
         },
         {
-            "tag": "forge:storage_blocks/zinc"
+            "tag": "c:storage_blocks/zinc"
         }
     ]
 }
