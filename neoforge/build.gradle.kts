@@ -26,9 +26,9 @@ dependencies {
 
     neoForge(group = "net.neoforged", name = "neoforge", version = neoforgeVersion)
 
-    modLocalRuntime(group = "mezz.jei", name = "jei-$minecraftVersion-neoforge", version = jeiVersion) {
-        isTransitive = false
-    }
+//    modLocalRuntime(group = "mezz.jei", name = "jei-$minecraftVersion-neoforge", version = jeiVersion) {
+//        isTransitive = false
+//    }
 
     common(project(":common", configuration = "namedElements")) {
         isTransitive = false
