@@ -55,7 +55,7 @@ subprojects {
 
             officialMojangMappings()
 
-            parchment(create(group = "org.parchmentmc.data", name = "parchment-1.20.6", version = parchmentVersion))
+            parchment(create(group = "org.parchmentmc.data", name = "parchment-$minecraftVersion", version = parchmentVersion))
         })
 
         "modApi"(group = "com.teamresourceful.resourcefullib", name = "resourcefullib-$modLoader-$minecraftVersion", version = resourcefulLibVersion)
@@ -153,7 +153,7 @@ subprojects {
         }
         repositories {
             maven {
-                setUrl("https://maven.resourcefulbees.com/repository/terrarium/")
+                setUrl("https://maven.teamresourceful.com/repository/terrarium/")
                 credentials {
                     username = System.getenv("MAVEN_USER")
                     password = System.getenv("MAVEN_PASS")

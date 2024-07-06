@@ -221,7 +221,7 @@ public class ModCtmModelProvider implements DataProvider {
                         ctmTextures.addProperty("particle", ctmTexture);
                         ResourceLocation main = ResourceLocation.parse(ctmTexture.substring(0, ctmTexture.lastIndexOf("/")));
                         String blockName = ctmTexture.substring(ctmTexture.lastIndexOf("/") + 1);
-                        String suffix = ctm.getFirst().suffix().length() > 0 ? "_" + ctm.getFirst().suffix() : "";
+                        String suffix = !ctm.getFirst().suffix().isEmpty() ? "_" + ctm.getFirst().suffix() : "";
                         for (var entry : ctm.getFirst().getTextureIds()) {
                             ctmTextures.addProperty(entry.value(), this.textures.getTexture(main + "/ctm/" + blockName + suffix + "/" + entry.keyInt()));
                         }
