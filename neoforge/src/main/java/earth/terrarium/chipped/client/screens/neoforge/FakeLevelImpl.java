@@ -14,10 +14,10 @@ import net.neoforged.neoforge.client.model.data.ModelData;
 public class FakeLevelImpl {
 
     public static void renderBatched(BlockRenderDispatcher dispatcher, BlockState state, BlockPos pos, BlockAndTintGetter level, PoseStack poseStack, VertexConsumer consumer, boolean checkSides, RandomSource random, RenderType type) {
-        ModelData data = ModelData.EMPTY;
         if (dispatcher.getBlockModel(state) instanceof AthenaBakedModel model) {
-            data = model.getModelData(level, pos, state, data);
+            dispatcher.renderBatched(state, pos, level, poseStack, consumer, checkSides, random, model.getModelData(level, pos, state, ModelData.EMPTY), type);
+        } else {
+            dispatcher.renderBatched(state, pos, level, poseStack, consumer, checkSides, random);
         }
-        dispatcher.renderBatched(state, pos, level, poseStack, consumer, checkSides, random, data, type);
     }
 }
