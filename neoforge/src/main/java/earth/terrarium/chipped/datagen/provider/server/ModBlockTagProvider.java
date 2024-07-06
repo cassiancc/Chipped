@@ -445,6 +445,17 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         createVanillaSet(ModBlocks.WARPED_TRAPDOOR, BlockTags.TRAPDOORS);
         createVanillaSet(ModBlocks.CHERRY_TRAPDOOR, BlockTags.TRAPDOORS);
         createVanillaSet(ModBlocks.BAMBOO_TRAPDOOR, BlockTags.TRAPDOORS);
+        createVanillaSet(ModBlocks.ACACIA_TRAPDOOR, BlockTags.WOODEN_TRAPDOORS);
+        createVanillaSet(ModBlocks.BIRCH_TRAPDOOR, BlockTags.WOODEN_TRAPDOORS);
+        createVanillaSet(ModBlocks.DARK_OAK_TRAPDOOR, BlockTags.WOODEN_TRAPDOORS);
+        createVanillaSet(ModBlocks.JUNGLE_TRAPDOOR, BlockTags.WOODEN_TRAPDOORS);
+        createVanillaSet(ModBlocks.MANGROVE_TRAPDOOR, BlockTags.WOODEN_TRAPDOORS);
+        createVanillaSet(ModBlocks.OAK_TRAPDOOR, BlockTags.WOODEN_TRAPDOORS);
+        createVanillaSet(ModBlocks.SPRUCE_TRAPDOOR, BlockTags.WOODEN_TRAPDOORS);
+        createVanillaSet(ModBlocks.CRIMSON_TRAPDOOR, BlockTags.WOODEN_TRAPDOORS);
+        createVanillaSet(ModBlocks.WARPED_TRAPDOOR, BlockTags.WOODEN_TRAPDOORS);
+        createVanillaSet(ModBlocks.CHERRY_TRAPDOOR, BlockTags.WOODEN_TRAPDOORS);
+        createVanillaSet(ModBlocks.BAMBOO_TRAPDOOR, BlockTags.WOODEN_TRAPDOORS);
         createVanillaSet(ModBlocks.TORCH.getFirst(), BlockTags.WALL_POST_OVERRIDE);
         createVanillaSet(ModBlocks.REDSTONE_TORCH.getFirst(), BlockTags.WALL_POST_OVERRIDE);
         createVanillaSet(ModBlocks.NETHER_WART_BLOCK, BlockTags.WART_BLOCKS);

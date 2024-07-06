@@ -1,1 +1,2 @@
 - 1.21
+- Add trapdoors to wooden trapdoors tag (#314)

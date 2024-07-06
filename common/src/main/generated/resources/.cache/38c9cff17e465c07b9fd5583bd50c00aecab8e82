@@ -1,4 +1,4 @@
-// 1.21	2024-06-15T12:25:15.079395	Tags for minecraft:item mod id chipped
+// 1.21	2024-07-06T02:59:01.881504	Tags for minecraft:item mod id chipped
 8b8d4b22d6e197dd9cd0413a09913d8ff719ec56 data/chipped/tags/item/acacia_door.json
 cfe7ea1fbe1452cd3b8e8ff3623e48f6cab9b991 data/chipped/tags/item/acacia_leaves.json
 98694fd0286312b5965e227c5e11570202bdfae2 data/chipped/tags/item/acacia_log.json
@@ -286,5 +286,6 @@ e971e7311ca29a5167b374235171daf2b2eebe67 data/minecraft/tags/item/sand.json
 5b3c695dcbbe61528e42117bfa3d365c1873d8f2 data/minecraft/tags/item/trapdoors.json
 ea1442883b46aa1cc3d661a0e6dff5137aa8ab2b data/minecraft/tags/item/wart_blocks.json
 af0e3072d8c6f57e384af1588a39f993755a97e2 data/minecraft/tags/item/wooden_doors.json
+5b3c695dcbbe61528e42117bfa3d365c1873d8f2 data/minecraft/tags/item/wooden_trapdoors.json
 813fc5ffde5d9aed514ae51f3c4e9119f217043f data/minecraft/tags/item/wool.json
 2ef0503cc4a4342c5b72d0f5ea623c34104c60f5 data/minecraft/tags/item/wool_carpets.json
