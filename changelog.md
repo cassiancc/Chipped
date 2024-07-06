@@ -1,2 +1,3 @@
 - 1.21
-- Add trapdoors to wooden trapdoors tag (#314)
+- Added trapdoors to wooden trapdoors tag (#314)
+- Fixed mobs able to spawn on glass (#290)
