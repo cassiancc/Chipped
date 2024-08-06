@@ -78,7 +78,6 @@ public class ChippedClient {
         createSetRenderType(ModBlocks.BIRCH_LEAVES, RenderType.cutout());
         createSetRenderType(ModBlocks.DARK_OAK_LEAVES, RenderType.cutout());
         createSetRenderType(ModBlocks.JUNGLE_LEAVES, RenderType.cutout());
-        createSetRenderType(ModBlocks.MANGROVE_ROOTS, RenderType.cutout());
         createSetRenderType(ModBlocks.OAK_LEAVES, RenderType.cutout());
         createSetRenderType(ModBlocks.SPRUCE_LEAVES, RenderType.cutout());
 
@@ -91,7 +90,6 @@ public class ChippedClient {
         createSetRenderType(ModBlocks.BIRCH_DOOR, RenderType.cutout());
         createSetRenderType(ModBlocks.DARK_OAK_DOOR, RenderType.cutout());
         createSetRenderType(ModBlocks.JUNGLE_DOOR, RenderType.cutout());
-        createSetRenderType(ModBlocks.MANGROVE_DOOR, RenderType.cutout());
         createSetRenderType(ModBlocks.OAK_DOOR, RenderType.cutout());
         createSetRenderType(ModBlocks.SPRUCE_DOOR, RenderType.cutout());
         createSetRenderType(ModBlocks.CRIMSON_DOOR, RenderType.cutout());
@@ -101,7 +99,6 @@ public class ChippedClient {
         createSetRenderType(ModBlocks.BIRCH_TRAPDOOR, RenderType.cutout());
         createSetRenderType(ModBlocks.DARK_OAK_TRAPDOOR, RenderType.cutout());
         createSetRenderType(ModBlocks.JUNGLE_TRAPDOOR, RenderType.cutout());
-        createSetRenderType(ModBlocks.MANGROVE_TRAPDOOR, RenderType.cutout());
         createSetRenderType(ModBlocks.OAK_TRAPDOOR, RenderType.cutout());
         createSetRenderType(ModBlocks.SPRUCE_TRAPDOOR, RenderType.cutout());
         createSetRenderType(ModBlocks.CRIMSON_TRAPDOOR, RenderType.cutout());

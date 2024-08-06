@@ -9,7 +9,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.TagEntry;
+import net.minecraft.tags.Tag;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -62,18 +62,12 @@ public class ModBlockTagProvider extends TagsProvider<Block> {
         registry.register(Blocks.PACKED_ICE, ModBlocks.PACKED_ICE, "packed_ice", BOTANIST_WORKBENCH_TAG);
         registry.register(Blocks.SNOW_BLOCK, ModBlocks.SNOW_BLOCK, "snow_block", BOTANIST_WORKBENCH_TAG);
         registry.register(Blocks.CLAY, ModBlocks.CLAY, "clay", BOTANIST_WORKBENCH_TAG);
-        registry.register(Blocks.MUD, ModBlocks.MUD, "mud", BOTANIST_WORKBENCH_TAG);
-        registry.register(Blocks.PACKED_MUD, ModBlocks.PACKED_MUD, "packed_muc", BOTANIST_WORKBENCH_TAG);
         registry.register(Blocks.ACACIA_LEAVES, ModBlocks.ACACIA_LEAVES, "acacia_leaves", BOTANIST_WORKBENCH_TAG);
         registry.register(Blocks.BIRCH_LEAVES, ModBlocks.BIRCH_LEAVES, "birch_leaves", BOTANIST_WORKBENCH_TAG);
         registry.register(Blocks.DARK_OAK_LEAVES, ModBlocks.DARK_OAK_LEAVES, "dark_oak_leaves", BOTANIST_WORKBENCH_TAG);
         registry.register(Blocks.JUNGLE_LEAVES, ModBlocks.JUNGLE_LEAVES, "jungle_leaves", BOTANIST_WORKBENCH_TAG);
-        registry.register(Blocks.MANGROVE_ROOTS, ModBlocks.MANGROVE_ROOTS, "mangrove_roots", BOTANIST_WORKBENCH_TAG);
         registry.register(Blocks.OAK_LEAVES, ModBlocks.OAK_LEAVES, "oak_leaves", BOTANIST_WORKBENCH_TAG);
         registry.register(Blocks.SPRUCE_LEAVES, ModBlocks.SPRUCE_LEAVES, "spruce_leaves", BOTANIST_WORKBENCH_TAG);
-        registry.register(Blocks.OCHRE_FROGLIGHT, ModBlocks.OCHRE_FROGLIGHT, "ochre_froglight", BOTANIST_WORKBENCH_TAG);
-        registry.register(Blocks.PEARLESCENT_FROGLIGHT, ModBlocks.PEARLESCENT_FROGLIGHT, "pearlescent_froglight", BOTANIST_WORKBENCH_TAG);
-        registry.register(Blocks.VERDANT_FROGLIGHT, ModBlocks.VERDANT_FROGLIGHT, "verdant_froglight", BOTANIST_WORKBENCH_TAG);
         registry.register(Blocks.BONE_BLOCK, ModBlocks.BONE_BLOCK, "bone_block", BOTANIST_WORKBENCH_TAG);
         registry.register(Blocks.BROWN_MUSHROOM_BLOCK, ModBlocks.BROWN_MUSHROOM_BLOCK, "brown_mushroom_block", BOTANIST_WORKBENCH_TAG);
         registry.register(Blocks.RED_MUSHROOM_BLOCK, ModBlocks.RED_MUSHROOM_BLOCK, "red_mushroom_block", BOTANIST_WORKBENCH_TAG);
@@ -106,7 +100,6 @@ public class ModBlockTagProvider extends TagsProvider<Block> {
         registry.register(Blocks.BIRCH_PLANKS, ModBlocks.BIRCH_PLANKS, "birch_planks", CARPENTERS_TABLE_TAG);
         registry.register(Blocks.DARK_OAK_PLANKS, ModBlocks.DARK_OAK_PLANKS, "dark_oak_planks", CARPENTERS_TABLE_TAG);
         registry.register(Blocks.JUNGLE_PLANKS, ModBlocks.JUNGLE_PLANKS, "jungle_planks", CARPENTERS_TABLE_TAG);
-        registry.register(Blocks.MANGROVE_PLANKS, ModBlocks.MANGROVE_PLANKS, "mangrove_planks", CARPENTERS_TABLE_TAG);
         registry.register(Blocks.OAK_PLANKS, ModBlocks.OAK_PLANKS, "oak_planks", CARPENTERS_TABLE_TAG);
         registry.register(Blocks.SPRUCE_PLANKS, ModBlocks.SPRUCE_PLANKS, "spruce_planks", CARPENTERS_TABLE_TAG);
         registry.register(Blocks.CRIMSON_PLANKS, ModBlocks.CRIMSON_PLANKS, "crimson_planks", CARPENTERS_TABLE_TAG);
@@ -115,7 +108,6 @@ public class ModBlockTagProvider extends TagsProvider<Block> {
         registry.register(Blocks.BIRCH_LOG, ModBlocks.BIRCH_LOG, "birch_log", CARPENTERS_TABLE_TAG);
         registry.register(Blocks.DARK_OAK_LOG, ModBlocks.DARK_OAK_LOG, "dark_oak_log", CARPENTERS_TABLE_TAG);
         registry.register(Blocks.JUNGLE_LOG, ModBlocks.JUNGLE_LOG, "jungle_log", CARPENTERS_TABLE_TAG);
-        registry.register(Blocks.MANGROVE_LOG, ModBlocks.MANGROVE_LOG, "mangrove_log", CARPENTERS_TABLE_TAG);
         registry.register(Blocks.OAK_LOG, ModBlocks.OAK_LOG, "oak_log", CARPENTERS_TABLE_TAG);
         registry.register(Blocks.SPRUCE_LOG, ModBlocks.SPRUCE_LOG, "spruce_log", CARPENTERS_TABLE_TAG);
         registry.register(Blocks.CRIMSON_STEM, ModBlocks.CRIMSON_STEM, "crimson_stem", CARPENTERS_TABLE_TAG);
@@ -127,7 +119,6 @@ public class ModBlockTagProvider extends TagsProvider<Block> {
         registry.register(Blocks.STRIPPED_BIRCH_LOG, ModBlocks.STRIPPED_BIRCH_LOG, "stripped_birch_log", CARPENTERS_TABLE_TAG);
         registry.register(Blocks.STRIPPED_DARK_OAK_LOG, ModBlocks.STRIPPED_DARK_OAK_LOG, "stripped_dark_oak_log", CARPENTERS_TABLE_TAG);
         registry.register(Blocks.STRIPPED_JUNGLE_LOG, ModBlocks.STRIPPED_JUNGLE_LOG, "stripped_jungle_log", CARPENTERS_TABLE_TAG);
-        registry.register(Blocks.STRIPPED_MANGROVE_LOG, ModBlocks.STRIPPED_MANGROVE_LOG, "stripped_mangrove_log", CARPENTERS_TABLE_TAG);
         registry.register(Blocks.STRIPPED_OAK_LOG, ModBlocks.STRIPPED_OAK_LOG, "stripped_oak_log", CARPENTERS_TABLE_TAG);
         registry.register(Blocks.STRIPPED_SPRUCE_LOG, ModBlocks.STRIPPED_SPRUCE_LOG, "stripped_spruce_log", CARPENTERS_TABLE_TAG);
         registry.register(Blocks.STRIPPED_WARPED_STEM, ModBlocks.STRIPPED_WARPED_STEM, "stripped_warped_stem", CARPENTERS_TABLE_TAG);
@@ -136,7 +127,6 @@ public class ModBlockTagProvider extends TagsProvider<Block> {
         registry.register(Blocks.BIRCH_DOOR, ModBlocks.BIRCH_DOOR, "birch_door", CARPENTERS_TABLE_TAG);
         registry.register(Blocks.DARK_OAK_DOOR, ModBlocks.DARK_OAK_DOOR, "dark_oak_door", CARPENTERS_TABLE_TAG);
         registry.register(Blocks.JUNGLE_DOOR, ModBlocks.JUNGLE_DOOR, "jungle_door", CARPENTERS_TABLE_TAG);
-        registry.register(Blocks.MANGROVE_DOOR, ModBlocks.MANGROVE_DOOR, "mangrove_door", CARPENTERS_TABLE_TAG);
         registry.register(Blocks.OAK_DOOR, ModBlocks.OAK_DOOR, "oak_door", CARPENTERS_TABLE_TAG);
         registry.register(Blocks.SPRUCE_DOOR, ModBlocks.SPRUCE_DOOR, "spruce_door", CARPENTERS_TABLE_TAG);
         registry.register(Blocks.CRIMSON_DOOR, ModBlocks.CRIMSON_DOOR, "crimson_door", CARPENTERS_TABLE_TAG);
@@ -145,7 +135,6 @@ public class ModBlockTagProvider extends TagsProvider<Block> {
         registry.register(Blocks.BIRCH_TRAPDOOR, ModBlocks.BIRCH_TRAPDOOR, "birch_trapdoor", CARPENTERS_TABLE_TAG);
         registry.register(Blocks.DARK_OAK_TRAPDOOR, ModBlocks.DARK_OAK_TRAPDOOR, "dark_oak_trapdoor", CARPENTERS_TABLE_TAG);
         registry.register(Blocks.JUNGLE_TRAPDOOR, ModBlocks.JUNGLE_TRAPDOOR, "jungle_trapdoor", CARPENTERS_TABLE_TAG);
-        registry.register(Blocks.MANGROVE_TRAPDOOR, ModBlocks.MANGROVE_TRAPDOOR, "mangrove_trapdoor", CARPENTERS_TABLE_TAG);
         registry.register(Blocks.OAK_TRAPDOOR, ModBlocks.OAK_TRAPDOOR, "oak_trapdoor", CARPENTERS_TABLE_TAG);
         registry.register(Blocks.SPRUCE_TRAPDOOR, ModBlocks.SPRUCE_TRAPDOOR, "spruce_trapdoor", CARPENTERS_TABLE_TAG);
         registry.register(Blocks.CRIMSON_TRAPDOOR, ModBlocks.CRIMSON_TRAPDOOR, "crimson_trapdoor", CARPENTERS_TABLE_TAG);
@@ -301,7 +290,6 @@ public class ModBlockTagProvider extends TagsProvider<Block> {
         registry.register(Blocks.WHITE_CONCRETE, ModBlocks.WHITE_CONCRETE, "white_concrete", MASON_TABLE_TAG);
         registry.register(Blocks.YELLOW_CONCRETE, ModBlocks.YELLOW_CONCRETE, "yellow_concrete", MASON_TABLE_TAG);
         registry.register(Blocks.BRICKS, ModBlocks.BRICKS, "bricks", MASON_TABLE_TAG);
-        registry.register(Blocks.MUD_BRICKS, ModBlocks.MUD_BRICKS, "mud_bricks", MASON_TABLE_TAG);
         registry.register(Blocks.POINTED_DRIPSTONE, ModBlocks.POINTED_DRIPSTONE, "pointed_dripstone", MASON_TABLE_TAG);
 
         registry.register(Blocks.IRON_BARS, ModBlocks.IRON_BARS, "iron_bars", TINKERING_TABLE_TAG);
@@ -327,22 +315,22 @@ public class ModBlockTagProvider extends TagsProvider<Block> {
     }
 
     private void addVanillaTags() {
-        createVanillaSet(ModBlocks.BLACK_CARPET, BlockTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.BLUE_CARPET, BlockTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.BROWN_CARPET, BlockTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.CYAN_CARPET, BlockTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.GRAY_CARPET, BlockTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.GREEN_CARPET, BlockTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.LIGHT_BLUE_CARPET, BlockTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.LIGHT_GRAY_CARPET, BlockTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.LIME_CARPET, BlockTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.MAGENTA_CARPET, BlockTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.ORANGE_CARPET, BlockTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.PINK_CARPET, BlockTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.PURPLE_CARPET, BlockTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.RED_CARPET, BlockTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.WHITE_CARPET, BlockTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.YELLOW_CARPET, BlockTags.WOOL_CARPETS);
+        createVanillaSet(ModBlocks.BLACK_CARPET, BlockTags.CARPETS);
+        createVanillaSet(ModBlocks.BLUE_CARPET, BlockTags.CARPETS);
+        createVanillaSet(ModBlocks.BROWN_CARPET, BlockTags.CARPETS);
+        createVanillaSet(ModBlocks.CYAN_CARPET, BlockTags.CARPETS);
+        createVanillaSet(ModBlocks.GRAY_CARPET, BlockTags.CARPETS);
+        createVanillaSet(ModBlocks.GREEN_CARPET, BlockTags.CARPETS);
+        createVanillaSet(ModBlocks.LIGHT_BLUE_CARPET, BlockTags.CARPETS);
+        createVanillaSet(ModBlocks.LIGHT_GRAY_CARPET, BlockTags.CARPETS);
+        createVanillaSet(ModBlocks.LIME_CARPET, BlockTags.CARPETS);
+        createVanillaSet(ModBlocks.MAGENTA_CARPET, BlockTags.CARPETS);
+        createVanillaSet(ModBlocks.ORANGE_CARPET, BlockTags.CARPETS);
+        createVanillaSet(ModBlocks.PINK_CARPET, BlockTags.CARPETS);
+        createVanillaSet(ModBlocks.PURPLE_CARPET, BlockTags.CARPETS);
+        createVanillaSet(ModBlocks.RED_CARPET, BlockTags.CARPETS);
+        createVanillaSet(ModBlocks.WHITE_CARPET, BlockTags.CARPETS);
+        createVanillaSet(ModBlocks.YELLOW_CARPET, BlockTags.CARPETS);
         createVanillaSet(ModBlocks.LADDER, BlockTags.CLIMBABLE);
         createVanillaSet(ModBlocks.VINE, BlockTags.CLIMBABLE);
         createVanillaSet(ModBlocks.DIRT, BlockTags.DIRT);
@@ -350,7 +338,6 @@ public class ModBlockTagProvider extends TagsProvider<Block> {
         createVanillaSet(ModBlocks.BIRCH_DOOR, BlockTags.WOODEN_DOORS);
         createVanillaSet(ModBlocks.DARK_OAK_DOOR, BlockTags.WOODEN_DOORS);
         createVanillaSet(ModBlocks.JUNGLE_DOOR, BlockTags.WOODEN_DOORS);
-        createVanillaSet(ModBlocks.MANGROVE_DOOR, BlockTags.WOODEN_DOORS);
         createVanillaSet(ModBlocks.OAK_DOOR, BlockTags.WOODEN_DOORS);
         createVanillaSet(ModBlocks.SPRUCE_DOOR, BlockTags.WOODEN_DOORS);
         createVanillaSet(ModBlocks.CRIMSON_DOOR, BlockTags.WOODEN_DOORS);
@@ -404,7 +391,6 @@ public class ModBlockTagProvider extends TagsProvider<Block> {
         createVanillaSet(ModBlocks.BIRCH_PLANKS, BlockTags.PLANKS);
         createVanillaSet(ModBlocks.DARK_OAK_PLANKS, BlockTags.PLANKS);
         createVanillaSet(ModBlocks.JUNGLE_PLANKS, BlockTags.PLANKS);
-        createVanillaSet(ModBlocks.MANGROVE_PLANKS, BlockTags.PLANKS);
         createVanillaSet(ModBlocks.OAK_PLANKS, BlockTags.PLANKS);
         createVanillaSet(ModBlocks.SPRUCE_PLANKS, BlockTags.PLANKS);
         createVanillaSet(ModBlocks.CRIMSON_PLANKS, BlockTags.PLANKS);
@@ -418,7 +404,6 @@ public class ModBlockTagProvider extends TagsProvider<Block> {
         createVanillaSet(ModBlocks.BIRCH_TRAPDOOR, BlockTags.TRAPDOORS);
         createVanillaSet(ModBlocks.DARK_OAK_TRAPDOOR, BlockTags.TRAPDOORS);
         createVanillaSet(ModBlocks.JUNGLE_TRAPDOOR, BlockTags.TRAPDOORS);
-        createVanillaSet(ModBlocks.MANGROVE_TRAPDOOR, BlockTags.TRAPDOORS);
         createVanillaSet(ModBlocks.OAK_TRAPDOOR, BlockTags.TRAPDOORS);
         createVanillaSet(ModBlocks.SPRUCE_TRAPDOOR, BlockTags.TRAPDOORS);
         createVanillaSet(ModBlocks.CRIMSON_TRAPDOOR, BlockTags.TRAPDOORS);
@@ -449,19 +434,19 @@ public class ModBlockTagProvider extends TagsProvider<Block> {
         ModBlocks.BLOCKS.stream().forEach(b -> {
             Material material = b.get().defaultBlockState().getMaterial();
             if (material == Material.STONE || material == Material.METAL || material == Material.AMETHYST || material == Material.HEAVY_METAL) {
-                tag(BlockTags.MINEABLE_WITH_PICKAXE).add(TagEntry.element(b.getId()));
+                tag(BlockTags.MINEABLE_WITH_PICKAXE).add(new Tag.TagEntry(b.getId()));
             }
             if (material == Material.WOOD || material == Material.NETHER_WOOD || material == Material.CACTUS) {
-                tag(BlockTags.MINEABLE_WITH_AXE).add(TagEntry.element(b.getId()));
+                tag(BlockTags.MINEABLE_WITH_AXE).add(new Tag.TagEntry(b.getId()));
             }
             if (material == Material.SAND || material == Material.SNOW || material == Material.GRASS || material == Material.DIRT || material == Material.CLAY) {
-                tag(BlockTags.MINEABLE_WITH_SHOVEL).add(TagEntry.element(b.getId()));
+                tag(BlockTags.MINEABLE_WITH_SHOVEL).add(new Tag.TagEntry(b.getId()));
             }
         });
     }
 
     private void createVanillaSet(ResourcefulRegistry<Block> registry, TagKey<Block> tag) {
-        registry.stream().forEach(b -> tag(tag).add(TagEntry.element(b.getId())));
+        registry.stream().forEach(b -> tag(tag).add(new Tag.TagEntry(b.getId())));
     }
 
     private void createSet(Block block, Collection<RegistryEntry<Block>> registry, String tag, TagKey<Item> workbench) {
@@ -475,9 +460,14 @@ public class ModBlockTagProvider extends TagsProvider<Block> {
     private void createSet(Block block, Collection<RegistryEntry<Block>> registry, ResourceLocation tag) {
         var tagKey = TagKey.create(Registry.BLOCK_REGISTRY, tag);
         if (block != null) {
-            tag(tagKey).add(TagEntry.element(Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block))));
+            tag(tagKey).add(new Tag.TagEntry(Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block))));
         }
-        registry.forEach(b -> tag(tagKey).add(TagEntry.element(b.getId())));
+        registry.forEach(b -> tag(tagKey).add(new Tag.TagEntry(b.getId())));
+    }
+
+    @Override
+    public String getName() {
+        return "";
     }
 
     @FunctionalInterface

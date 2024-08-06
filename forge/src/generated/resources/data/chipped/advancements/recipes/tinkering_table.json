@@ -1,13 +1,7 @@
 {
-  "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "chipped:tinkering_table"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    },
     "has_tinkering_table": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -16,19 +10,12 @@
             ]
           }
         ]
-      },
-      "trigger": "minecraft:inventory_changed"
+      }
     }
   },
   "requirements": [
     [
-      "has_tinkering_table",
-      "has_the_recipe"
+      "has_tinkering_table"
     ]
-  ],
-  "rewards": {
-    "recipes": [
-      "chipped:tinkering_table"
-    ]
-  }
+  ]
 }

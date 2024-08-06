@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_column",
   "textures": {
-    "end": "minecraft:block/oak_planks",
-    "side": "chipped:block/bookshelf/ancient_oak_large_bookshelf"
+    "side": "chipped:block/bookshelf/ancient_oak_large_bookshelf",
+    "end": "minecraft:block/oak_planks"
   }
 }

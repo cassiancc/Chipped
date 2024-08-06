@@ -9,7 +9,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.TagEntry;
+import net.minecraft.tags.Tag;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -32,28 +32,27 @@ public class ModItemTagProvider extends TagsProvider<Item> {
     }
 
     private void addVanillaTags() {
-        createVanillaSet(ModBlocks.BLACK_CARPET, ItemTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.BLUE_CARPET, ItemTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.BROWN_CARPET, ItemTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.CYAN_CARPET, ItemTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.GRAY_CARPET, ItemTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.GREEN_CARPET, ItemTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.LIGHT_BLUE_CARPET, ItemTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.LIGHT_GRAY_CARPET, ItemTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.LIME_CARPET, ItemTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.MAGENTA_CARPET, ItemTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.ORANGE_CARPET, ItemTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.PINK_CARPET, ItemTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.PURPLE_CARPET, ItemTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.RED_CARPET, ItemTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.WHITE_CARPET, ItemTags.WOOL_CARPETS);
-        createVanillaSet(ModBlocks.YELLOW_CARPET, ItemTags.WOOL_CARPETS);
+        createVanillaSet(ModBlocks.BLACK_CARPET, ItemTags.CARPETS);
+        createVanillaSet(ModBlocks.BLUE_CARPET, ItemTags.CARPETS);
+        createVanillaSet(ModBlocks.BROWN_CARPET, ItemTags.CARPETS);
+        createVanillaSet(ModBlocks.CYAN_CARPET, ItemTags.CARPETS);
+        createVanillaSet(ModBlocks.GRAY_CARPET, ItemTags.CARPETS);
+        createVanillaSet(ModBlocks.GREEN_CARPET, ItemTags.CARPETS);
+        createVanillaSet(ModBlocks.LIGHT_BLUE_CARPET, ItemTags.CARPETS);
+        createVanillaSet(ModBlocks.LIGHT_GRAY_CARPET, ItemTags.CARPETS);
+        createVanillaSet(ModBlocks.LIME_CARPET, ItemTags.CARPETS);
+        createVanillaSet(ModBlocks.MAGENTA_CARPET, ItemTags.CARPETS);
+        createVanillaSet(ModBlocks.ORANGE_CARPET, ItemTags.CARPETS);
+        createVanillaSet(ModBlocks.PINK_CARPET, ItemTags.CARPETS);
+        createVanillaSet(ModBlocks.PURPLE_CARPET, ItemTags.CARPETS);
+        createVanillaSet(ModBlocks.RED_CARPET, ItemTags.CARPETS);
+        createVanillaSet(ModBlocks.WHITE_CARPET, ItemTags.CARPETS);
+        createVanillaSet(ModBlocks.YELLOW_CARPET, ItemTags.CARPETS);
         createVanillaSet(ModBlocks.DIRT, ItemTags.DIRT);
         createVanillaSet(ModBlocks.ACACIA_DOOR, ItemTags.WOODEN_DOORS);
         createVanillaSet(ModBlocks.BIRCH_DOOR, ItemTags.WOODEN_DOORS);
         createVanillaSet(ModBlocks.DARK_OAK_DOOR, ItemTags.WOODEN_DOORS);
         createVanillaSet(ModBlocks.JUNGLE_DOOR, ItemTags.WOODEN_DOORS);
-        createVanillaSet(ModBlocks.MANGROVE_DOOR, ItemTags.WOODEN_DOORS);
         createVanillaSet(ModBlocks.OAK_DOOR, ItemTags.WOODEN_DOORS);
         createVanillaSet(ModBlocks.SPRUCE_DOOR, ItemTags.WOODEN_DOORS);
         createVanillaSet(ModBlocks.CRIMSON_DOOR, ItemTags.WOODEN_DOORS);
@@ -71,7 +70,6 @@ public class ModItemTagProvider extends TagsProvider<Item> {
         createVanillaSet(ModBlocks.BIRCH_PLANKS, ItemTags.PLANKS);
         createVanillaSet(ModBlocks.DARK_OAK_PLANKS, ItemTags.PLANKS);
         createVanillaSet(ModBlocks.JUNGLE_PLANKS, ItemTags.PLANKS);
-        createVanillaSet(ModBlocks.MANGROVE_PLANKS, ItemTags.PLANKS);
         createVanillaSet(ModBlocks.OAK_PLANKS, ItemTags.PLANKS);
         createVanillaSet(ModBlocks.SPRUCE_PLANKS, ItemTags.PLANKS);
         createVanillaSet(ModBlocks.CRIMSON_PLANKS, ItemTags.PLANKS);
@@ -82,13 +80,10 @@ public class ModItemTagProvider extends TagsProvider<Item> {
         createVanillaSet(ModBlocks.BIRCH_TRAPDOOR, ItemTags.TRAPDOORS);
         createVanillaSet(ModBlocks.DARK_OAK_TRAPDOOR, ItemTags.TRAPDOORS);
         createVanillaSet(ModBlocks.JUNGLE_TRAPDOOR, ItemTags.TRAPDOORS);
-        createVanillaSet(ModBlocks.MANGROVE_TRAPDOOR, ItemTags.TRAPDOORS);
         createVanillaSet(ModBlocks.OAK_TRAPDOOR, ItemTags.TRAPDOORS);
         createVanillaSet(ModBlocks.SPRUCE_TRAPDOOR, ItemTags.TRAPDOORS);
         createVanillaSet(ModBlocks.CRIMSON_TRAPDOOR, ItemTags.TRAPDOORS);
         createVanillaSet(ModBlocks.WARPED_TRAPDOOR, ItemTags.TRAPDOORS);
-        createVanillaSet(ModBlocks.NETHER_WART_BLOCK, ItemTags.WART_BLOCKS);
-        createVanillaSet(ModBlocks.WARPED_WART_BLOCK, ItemTags.WART_BLOCKS);
         createVanillaSet(ModBlocks.BLACK_WOOL, ItemTags.WOOL);
         createVanillaSet(ModBlocks.BLUE_WOOL, ItemTags.WOOL);
         createVanillaSet(ModBlocks.BROWN_WOOL, ItemTags.WOOL);
@@ -108,7 +103,7 @@ public class ModItemTagProvider extends TagsProvider<Item> {
     }
 
     private void createVanillaSet(ResourcefulRegistry<Block> registry, TagKey<Item> tag) {
-        registry.stream().forEach(b -> tag(tag).add(TagEntry.element(b.getId())));
+        registry.stream().forEach(b -> tag(tag).add(new Tag.TagEntry(b.getId())));
     }
 
     private void createSet(Block block, ResourcefulRegistry<Block> registry, String tag, TagKey<Item> workbench) {
@@ -118,8 +113,13 @@ public class ModItemTagProvider extends TagsProvider<Item> {
     private void createSet(Block block, Collection<RegistryEntry<Block>> registry, String tag, TagKey<Item> workbench) {
         var tagKey = TagKey.create(Registry.ITEM_REGISTRY, new ResourceLocation(Chipped.MOD_ID, tag));
         if (block != null) {
-            tag(tagKey).add(TagEntry.element(Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block))));
+            tag(tagKey).add(new Tag.TagEntry(Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block))));
         }
-        registry.forEach(b -> tag(tagKey).add(TagEntry.element(b.getId())));
+        registry.forEach(b -> tag(tagKey).add(new Tag.TagEntry(b.getId())));
+    }
+
+    @Override
+    public String getName() {
+        return "";
     }
 }

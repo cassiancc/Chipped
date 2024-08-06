@@ -162,23 +162,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
         createSet(ModBlocks.BIRCH_PLANKS, "birch_planks");
         createSet(ModBlocks.DARK_OAK_PLANKS, "dark_oak_planks");
         createSet(ModBlocks.JUNGLE_PLANKS, "jungle_planks");
-        createSet(ModBlocks.MANGROVE_PLANKS, "mangrove_planks");
         createSet(ModBlocks.OAK_PLANKS, "oak_planks");
         createSet(ModBlocks.SPRUCE_PLANKS, "spruce_planks");
         createSet(ModBlocks.CRIMSON_PLANKS, "crimson_planks");
         createSet(ModBlocks.WARPED_PLANKS, "warped_planks");
 
         createSet(ModBlocks.BRICKS, "bricks");
-        createSet(ModBlocks.MUD, "mud");
-        createSet(ModBlocks.PACKED_MUD, "packed_mud");
-        createSet(ModBlocks.MUD_BRICKS, "mud_bricks");
 
 
         createLogSet(ModBlocks.ACACIA_LOG, "acacia_log");
         createLogSet(ModBlocks.BIRCH_LOG, "birch_log");
         createLogSet(ModBlocks.DARK_OAK_LOG, "dark_oak_log");
         createLogSet(ModBlocks.JUNGLE_LOG, "jungle_log");
-        createLogSet(ModBlocks.MANGROVE_LOG, "mangrove_log");
         createLogSet(ModBlocks.OAK_LOG, "oak_log");
         createLogSet(ModBlocks.SPRUCE_LOG, "spruce_log");
         createLogSet(ModBlocks.CRIMSON_STEM, "crimson_stem");
@@ -223,13 +218,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         createSet(ModBlocks.BIRCH_LEAVES, "birch_leaves", 4);
         createSet(ModBlocks.DARK_OAK_LEAVES, "dark_oak_leaves", 4);
         createSet(ModBlocks.JUNGLE_LEAVES, "jungle_leaves", 4);
-        createRootSet(ModBlocks.MANGROVE_ROOTS, "mangrove_roots");
         createSet(ModBlocks.OAK_LEAVES, "oak_leaves", 4);
         createSet(ModBlocks.SPRUCE_LEAVES, "spruce_leaves", 4);
-
-        createSet(ModBlocks.OCHRE_FROGLIGHT, "ochre_froglight");
-        createSet(ModBlocks.PEARLESCENT_FROGLIGHT, "pearlescent_froglight");
-        createSet(ModBlocks.VERDANT_FROGLIGHT, "verdant_froglight");
 
         createSnowyLeaves(ForgeRegistries.BLOCKS.getValue(new ResourceLocation(Chipped.MOD_ID, "frosted_acacia_leaves")), "acacia_leaves");
         createSnowyLeaves(ForgeRegistries.BLOCKS.getValue(new ResourceLocation(Chipped.MOD_ID, "frosted_birch_leaves")), "birch_leaves");
@@ -276,7 +266,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         createStrippedLogSet(ModBlocks.STRIPPED_BIRCH_LOG, "stripped_birch_log");
         createStrippedLogSet(ModBlocks.STRIPPED_DARK_OAK_LOG, "stripped_dark_oak_log");
         createStrippedLogSet(ModBlocks.STRIPPED_JUNGLE_LOG, "stripped_jungle_log");
-        createStrippedLogSet(ModBlocks.STRIPPED_MANGROVE_LOG, "stripped_mangrove_log");
         createStrippedLogSet(ModBlocks.STRIPPED_OAK_LOG, "stripped_oak_log");
         createStrippedLogSet(ModBlocks.STRIPPED_SPRUCE_LOG, "stripped_spruce_log");
         createStrippedLogSet(ModBlocks.STRIPPED_WARPED_STEM, "stripped_warped_stem");
@@ -286,7 +275,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         createDoorSet(ModBlocks.BIRCH_DOOR, "birch_door");
         createDoorSet(ModBlocks.DARK_OAK_DOOR, "dark_oak_door");
         createDoorSet(ModBlocks.JUNGLE_DOOR, "jungle_door");
-        createDoorSet(ModBlocks.MANGROVE_DOOR, "mangrove_door");
         createDoorSet(ModBlocks.OAK_DOOR, "oak_door");
         createDoorSet(ModBlocks.SPRUCE_DOOR, "spruce_door");
         createDoorSet(ModBlocks.CRIMSON_DOOR, "crimson_door");
@@ -296,7 +284,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         createTrapdoorSet(ModBlocks.BIRCH_TRAPDOOR, "birch_trapdoor");
         createTrapdoorSet(ModBlocks.DARK_OAK_TRAPDOOR, "dark_oak_trapdoor");
         createTrapdoorSet(ModBlocks.JUNGLE_TRAPDOOR, "jungle_trapdoor");
-        createTrapdoorSet(ModBlocks.MANGROVE_TRAPDOOR, "mangrove_trapdoor");
         createTrapdoorSet(ModBlocks.OAK_TRAPDOOR, "oak_trapdoor");
         createTrapdoorSet(ModBlocks.SPRUCE_TRAPDOOR, "spruce_trapdoor");
         createTrapdoorSet(ModBlocks.CRIMSON_TRAPDOOR, "crimson_trapdoor");

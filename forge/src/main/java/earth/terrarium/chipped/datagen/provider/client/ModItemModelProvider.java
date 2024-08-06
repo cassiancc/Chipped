@@ -55,7 +55,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         createItemSet(ModBlocks.BIRCH_DOOR, "birch_door");
         createItemSet(ModBlocks.DARK_OAK_DOOR, "dark_oak_door");
         createItemSet(ModBlocks.JUNGLE_DOOR, "jungle_door");
-        createItemSet(ModBlocks.MANGROVE_DOOR, "mangrove_door");
         createItemSet(ModBlocks.OAK_DOOR, "oak_door");
         createItemSet(ModBlocks.SPRUCE_DOOR, "spruce_door");
         createItemSet(ModBlocks.CRIMSON_DOOR, "crimson_door");

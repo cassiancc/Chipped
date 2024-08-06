@@ -80,6 +80,10 @@ allprojects {
             }
         }
         maven { url = "https://maven.resourcefulbees.com/repository/maven-public/" }
+        flatDir {
+            dirs 'lib'
+        }
+
     }
 
     tasks.withType(JavaCompile).tap {

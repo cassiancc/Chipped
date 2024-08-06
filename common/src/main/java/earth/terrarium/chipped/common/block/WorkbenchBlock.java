@@ -7,6 +7,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Registry;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.util.LazyLoadedValue;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.InteractionHand;
@@ -53,7 +54,7 @@ public class WorkbenchBlock extends Block {
     public WorkbenchBlock(ContainerFactory factory, Properties properties) {
         super(properties);
         this.factory = factory;
-        containerName = new LazyLoadedValue<>(() -> Component.translatable("container.chipped." + Registry.BLOCK.getKey(WorkbenchBlock.this).getPath()));
+        containerName = new LazyLoadedValue<>(() -> new TranslatableComponent("container.chipped." + Registry.BLOCK.getKey(WorkbenchBlock.this).getPath()));
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(MODEL_TYPE, WorkbenchModelType.MAIN));
     }
 

@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/cube_bottom_top",
   "textures": {
-    "bottom": "chipped:block/melon/swampy_melon_bottom",
     "side": "chipped:block/melon/swampy_melon",
+    "bottom": "chipped:block/melon/swampy_melon_bottom",
     "top": "chipped:block/melon/swampy_melon_top"
   }
 }

@@ -18,7 +18,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.PlaceOnWaterBlockItem;
 import net.minecraft.world.item.StandingAndWallBlockItem;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -66,18 +65,12 @@ public class ModBlocks {
     public static final ResourcefulRegistry<Block> PACKED_ICE = createRegistry(Blocks.PACKED_ICE, Palette.STONE);
     public static final ResourcefulRegistry<Block> SNOW_BLOCK = createRegistry(Blocks.SNOW_BLOCK, Palette.STONE);
     public static final ResourcefulRegistry<Block> CLAY = createRegistry(Blocks.CLAY, Palette.CLAY);
-    public static final ResourcefulRegistry<Block> MUD = createRegistry(Blocks.MUD, Palette.MUD, MudBlock::new);
-    public static final ResourcefulRegistry<Block> PACKED_MUD = createRegistry(Blocks.PACKED_MUD, Palette.MUD);
     public static final ResourcefulRegistry<Block> ACACIA_LEAVES = createRegistry(Blocks.ACACIA_LEAVES, Palette.LEAVES);
     public static final ResourcefulRegistry<Block> BIRCH_LEAVES = createRegistry(Blocks.BIRCH_LEAVES, Palette.LEAVES);
     public static final ResourcefulRegistry<Block> DARK_OAK_LEAVES = createRegistry(Blocks.DARK_OAK_LEAVES, Palette.LEAVES);
     public static final ResourcefulRegistry<Block> JUNGLE_LEAVES = createRegistry(Blocks.JUNGLE_LEAVES, Palette.LEAVES);
-    public static final ResourcefulRegistry<Block> MANGROVE_ROOTS = createRegistry(Blocks.MANGROVE_ROOTS, Palette.ROOTS);
     public static final ResourcefulRegistry<Block> OAK_LEAVES = createRegistry(Blocks.OAK_LEAVES, Palette.LEAVES);
     public static final ResourcefulRegistry<Block> SPRUCE_LEAVES = createRegistry(Blocks.SPRUCE_LEAVES, Palette.LEAVES);
-    public static final ResourcefulRegistry<Block> OCHRE_FROGLIGHT = createRegistry(Blocks.OCHRE_FROGLIGHT, Palette.FROGLIGHT);
-    public static final ResourcefulRegistry<Block> PEARLESCENT_FROGLIGHT = createRegistry(Blocks.PEARLESCENT_FROGLIGHT, Palette.FROGLIGHT);
-    public static final ResourcefulRegistry<Block> VERDANT_FROGLIGHT = createRegistry(Blocks.VERDANT_FROGLIGHT, Palette.FROGLIGHT);
     public static final ResourcefulRegistry<Block> BONE_BLOCK = createRegistry(Blocks.BONE_BLOCK, Palette.BONE_BLOCK, RotatedPillarBlock::new);
     public static final ResourcefulRegistry<Block> BROWN_MUSHROOM_BLOCK = createRegistry(Blocks.BROWN_MUSHROOM_BLOCK, Palette.MUSHROOM_BLOCK);
     public static final ResourcefulRegistry<Block> RED_MUSHROOM_BLOCK = createRegistry(Blocks.RED_MUSHROOM_BLOCK, Palette.RED_MUSHROOM_BLOCK);
@@ -95,7 +88,7 @@ public class ModBlocks {
     public static final ResourcefulRegistry<Block> CRIMSON_ROOTS = createRegistry(Blocks.CRIMSON_ROOTS, Palette.CRIMSON_ROOTS, RootsBlock::new);
     public static final ResourcefulRegistry<Block> WARPED_ROOTS = createRegistry(Blocks.WARPED_ROOTS, Palette.WARPED_ROOTS, RootsBlock::new);
     public static final ResourcefulRegistry<Block> DRIED_KELP_BLOCK = createRegistry(Blocks.DRIED_KELP_BLOCK, Palette.DRIED_KELP_BLOCK);
-    public static final ResourcefulRegistry<Block> LILY_PAD = createRegistry(Blocks.LILY_PAD, Palette.LILY_PAD, WaterlilyBlock::new, PlaceOnWaterBlockItem::new);
+    public static final ResourcefulRegistry<Block> LILY_PAD = createRegistry(Blocks.LILY_PAD, Palette.LILY_PAD, WaterlilyBlock::new);
     public static final ResourcefulRegistry<Block> NETHER_SPROUTS = createRegistry(Blocks.NETHER_SPROUTS, Palette.NETHER_SPROUTS);
     public static final ResourcefulRegistry<Block> NETHER_WART_BLOCK = createRegistry(Blocks.NETHER_WART_BLOCK, Palette.WART_BLOCK);
     public static final ResourcefulRegistry<Block> PUMPKIN = createRegistry(Blocks.PUMPKIN, Palette.PUMPKIN, PumpkinBlock::new);
@@ -110,7 +103,6 @@ public class ModBlocks {
     public static final ResourcefulRegistry<Block> BIRCH_PLANKS = createRegistry(Blocks.BIRCH_PLANKS, Palette.PLANKS);
     public static final ResourcefulRegistry<Block> DARK_OAK_PLANKS = createRegistry(Blocks.DARK_OAK_PLANKS, Palette.PLANKS);
     public static final ResourcefulRegistry<Block> JUNGLE_PLANKS = createRegistry(Blocks.JUNGLE_PLANKS, Palette.PLANKS);
-    public static final ResourcefulRegistry<Block> MANGROVE_PLANKS = createRegistry(Blocks.MANGROVE_PLANKS, Palette.MANGROVE_PLANKS);
     public static final ResourcefulRegistry<Block> OAK_PLANKS = createRegistry(Blocks.OAK_PLANKS, Palette.PLANKS);
     public static final ResourcefulRegistry<Block> SPRUCE_PLANKS = createRegistry(Blocks.SPRUCE_PLANKS, Palette.PLANKS);
     public static final ResourcefulRegistry<Block> CRIMSON_PLANKS = createRegistry(Blocks.CRIMSON_PLANKS, Palette.PLANKS);
@@ -119,7 +111,6 @@ public class ModBlocks {
     public static final ResourcefulRegistry<Block> BIRCH_LOG = createRegistry(Blocks.BIRCH_LOG, Palette.LOG, RotatedPillarBlock::new);
     public static final ResourcefulRegistry<Block> DARK_OAK_LOG = createRegistry(Blocks.DARK_OAK_LOG, Palette.LOG, RotatedPillarBlock::new);
     public static final ResourcefulRegistry<Block> JUNGLE_LOG = createRegistry(Blocks.JUNGLE_LOG, Palette.LOG, RotatedPillarBlock::new);
-    public static final ResourcefulRegistry<Block> MANGROVE_LOG = createRegistry(Blocks.MANGROVE_LOG, Palette.LOG, RotatedPillarBlock::new);
     public static final ResourcefulRegistry<Block> OAK_LOG = createRegistry(Blocks.OAK_LOG, Palette.LOG, RotatedPillarBlock::new);
     public static final ResourcefulRegistry<Block> SPRUCE_LOG = createRegistry(Blocks.SPRUCE_LOG, Palette.LOG, RotatedPillarBlock::new);
     public static final ResourcefulRegistry<Block> CRIMSON_STEM = createRegistry(Blocks.CRIMSON_STEM, Palette.CRIMSON_STEM, RotatedPillarBlock::new);
@@ -131,7 +122,6 @@ public class ModBlocks {
     public static final ResourcefulRegistry<Block> STRIPPED_BIRCH_LOG = createRegistry(Blocks.STRIPPED_BIRCH_LOG, Palette.STRIPPED_LOG, RotatedPillarBlock::new);
     public static final ResourcefulRegistry<Block> STRIPPED_DARK_OAK_LOG = createRegistry(Blocks.STRIPPED_DARK_OAK_LOG, Palette.STRIPPED_LOG, RotatedPillarBlock::new);
     public static final ResourcefulRegistry<Block> STRIPPED_JUNGLE_LOG = createRegistry(Blocks.STRIPPED_JUNGLE_LOG, Palette.STRIPPED_LOG, RotatedPillarBlock::new);
-    public static final ResourcefulRegistry<Block> STRIPPED_MANGROVE_LOG = createRegistry(Blocks.STRIPPED_MANGROVE_LOG, Palette.STRIPPED_MANGROVE_LOG, RotatedPillarBlock::new);
     public static final ResourcefulRegistry<Block> STRIPPED_OAK_LOG = createRegistry(Blocks.STRIPPED_OAK_LOG, Palette.STRIPPED_LOG, RotatedPillarBlock::new);
     public static final ResourcefulRegistry<Block> STRIPPED_SPRUCE_LOG = createRegistry(Blocks.STRIPPED_SPRUCE_LOG, Palette.STRIPPED_LOG, RotatedPillarBlock::new);
     public static final ResourcefulRegistry<Block> STRIPPED_WARPED_STEM = createRegistry(Blocks.STRIPPED_WARPED_STEM, Palette.STRIPPED_LOG, RotatedPillarBlock::new);
@@ -140,7 +130,6 @@ public class ModBlocks {
     public static final ResourcefulRegistry<Block> BIRCH_DOOR = createRegistry(Blocks.BIRCH_DOOR, Palette.BIRCH_DOOR, DoorBlock::new);
     public static final ResourcefulRegistry<Block> DARK_OAK_DOOR = createRegistry(Blocks.DARK_OAK_DOOR, Palette.DARK_OAK_DOOR, DoorBlock::new);
     public static final ResourcefulRegistry<Block> JUNGLE_DOOR = createRegistry(Blocks.JUNGLE_DOOR, Palette.JUNGLE_DOOR, DoorBlock::new);
-    public static final ResourcefulRegistry<Block> MANGROVE_DOOR = createRegistry(Blocks.MANGROVE_DOOR, Palette.MANGROVE_DOOR, DoorBlock::new);
     public static final ResourcefulRegistry<Block> OAK_DOOR = createRegistry(Blocks.OAK_DOOR, Palette.DOOR, DoorBlock::new);
     public static final ResourcefulRegistry<Block> SPRUCE_DOOR = createRegistry(Blocks.SPRUCE_DOOR, Palette.SPRUCE_DOOR, DoorBlock::new);
     public static final ResourcefulRegistry<Block> CRIMSON_DOOR = createRegistry(Blocks.CRIMSON_DOOR, Palette.CRIMSON_DOOR, DoorBlock::new);
@@ -149,7 +138,6 @@ public class ModBlocks {
     public static final ResourcefulRegistry<Block> BIRCH_TRAPDOOR = createRegistry(Blocks.BIRCH_TRAPDOOR, Palette.TRAPDOOR, TrapDoorBlock::new);
     public static final ResourcefulRegistry<Block> DARK_OAK_TRAPDOOR = createRegistry(Blocks.DARK_OAK_TRAPDOOR, Palette.TRAPDOOR, TrapDoorBlock::new);
     public static final ResourcefulRegistry<Block> JUNGLE_TRAPDOOR = createRegistry(Blocks.JUNGLE_TRAPDOOR, Palette.JUNGLE_TRAPDOOR, TrapDoorBlock::new);
-    public static final ResourcefulRegistry<Block> MANGROVE_TRAPDOOR = createRegistry(Blocks.MANGROVE_TRAPDOOR, Palette.MANGROVE_TRAPDOOR, TrapDoorBlock::new);
     public static final ResourcefulRegistry<Block> OAK_TRAPDOOR = createRegistry(Blocks.OAK_TRAPDOOR, Palette.OAK_TRAPDOOR, TrapDoorBlock::new);
     public static final ResourcefulRegistry<Block> SPRUCE_TRAPDOOR = createRegistry(Blocks.SPRUCE_TRAPDOOR, Palette.SPRUCE_TRAPDOOR, TrapDoorBlock::new);
     public static final ResourcefulRegistry<Block> CRIMSON_TRAPDOOR = createRegistry(Blocks.CRIMSON_TRAPDOOR, Palette.CRIMSON_TRAPDOOR, TrapDoorBlock::new);
@@ -305,7 +293,6 @@ public class ModBlocks {
     public static final ResourcefulRegistry<Block> WHITE_CONCRETE = createRegistry(Blocks.WHITE_CONCRETE, Palette.CONCRETE);
     public static final ResourcefulRegistry<Block> YELLOW_CONCRETE = createRegistry(Blocks.YELLOW_CONCRETE, Palette.CONCRETE);
     public static final ResourcefulRegistry<Block> BRICKS = createRegistry(Blocks.BRICKS, Palette.BRICKS);
-    public static final ResourcefulRegistry<Block> MUD_BRICKS = createRegistry(Blocks.MUD_BRICKS, Palette.MUD);
     public static final ResourcefulRegistry<Block> POINTED_DRIPSTONE = createRegistry(Blocks.POINTED_DRIPSTONE, Palette.POINTED_DRIPSTONE, SpecialPointedDripstoneBlock::new);
 
     public static final ResourcefulRegistry<Block> IRON_BARS = createRegistry(Blocks.IRON_BARS, Palette.IRON_BARS, IronBarsBlock::new);
@@ -367,6 +354,6 @@ public class ModBlocks {
     }
 
     private static BlockBehaviour.Properties createProperties(Block ref) {
-        return BlockBehaviour.Properties.copy(ref).noLootTable();
+        return BlockBehaviour.Properties.copy(ref).noDrops();
     }
 }

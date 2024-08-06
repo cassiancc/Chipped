@@ -1,9 +1,5 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "chipped:block/paved_lime_glazed_terracotta",
-      "y": 90
-    },
     "facing=north": {
       "model": "chipped:block/paved_lime_glazed_terracotta"
     },
@@ -14,6 +10,10 @@
     "facing=west": {
       "model": "chipped:block/paved_lime_glazed_terracotta",
       "y": 270
+    },
+    "facing=east": {
+      "model": "chipped:block/paved_lime_glazed_terracotta",
+      "y": 90
     }
   }
 }

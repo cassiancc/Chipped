@@ -1,5 +1,6 @@
 package earth.terrarium.chipped.common.compat.jei;
 
+import earth.terrarium.chipped.Chipped;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
@@ -11,6 +12,7 @@ import mezz.jei.api.recipe.category.IRecipeCategory;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.Registry;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -29,13 +31,14 @@ public class ChippedRecipeCategory implements IRecipeCategory<ChippedRecipeCateg
 
     private static final ResourceLocation TEXTURE = new ResourceLocation("jei", "textures/gui/gui_vanilla.png");
 
-
+    private final ResourceLocation UID;
     private final RecipeType<FlattenedRecipe> type;
     private final String localizedName;
     private final IDrawable background;
     private final IDrawable icon;
 
     public ChippedRecipeCategory(Item item, RecipeType<FlattenedRecipe> type, IGuiHelper guiHelper) {
+        UID = Registry.ITEM.getKey(item);
         this.type = type;
         localizedName = I18n.get("container.chipped." + Registry.ITEM.getKey(item).getPath());
         background = guiHelper.createDrawable(TEXTURE, 0, 220, 82, 34);
@@ -49,7 +52,7 @@ public class ChippedRecipeCategory implements IRecipeCategory<ChippedRecipeCateg
 
     @Override
     public Component getTitle() {
-        return Component.literal(localizedName);
+        return new TextComponent(localizedName);
     }
 
     @Override
@@ -66,6 +69,16 @@ public class ChippedRecipeCategory implements IRecipeCategory<ChippedRecipeCateg
     public void setRecipe(IRecipeLayoutBuilder builder, FlattenedRecipe recipe, IFocusGroup focuses) {
         builder.addSlot(RecipeIngredientRole.INPUT, 1, 9).addIngredients(recipe.tag);
         builder.addSlot(RecipeIngredientRole.OUTPUT, 61, 9).addItemStack(recipe.result);
+    }
+
+    @Override
+    public ResourceLocation getUid() {
+        return UID;
+    }
+
+    @Override
+    public Class<? extends FlattenedRecipe> getRecipeClass() {
+        return FlattenedRecipe.class;
     }
 
     public record FlattenedRecipe(Ingredient tag, ItemStack result) {

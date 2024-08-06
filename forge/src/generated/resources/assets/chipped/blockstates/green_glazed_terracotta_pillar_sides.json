@@ -1,9 +1,5 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "chipped:block/green_glazed_terracotta_pillar_sides",
-      "y": 90
-    },
     "facing=north": {
       "model": "chipped:block/green_glazed_terracotta_pillar_sides"
     },
@@ -14,6 +10,10 @@
     "facing=west": {
       "model": "chipped:block/green_glazed_terracotta_pillar_sides",
       "y": 270
+    },
+    "facing=east": {
+      "model": "chipped:block/green_glazed_terracotta_pillar_sides",
+      "y": 90
     }
   }
 }

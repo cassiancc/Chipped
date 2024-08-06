@@ -1,9 +1,5 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "chipped:block/light_blue_glazed_terracotta_tiles",
-      "y": 90
-    },
     "facing=north": {
       "model": "chipped:block/light_blue_glazed_terracotta_tiles"
     },
@@ -14,6 +10,10 @@
     "facing=west": {
       "model": "chipped:block/light_blue_glazed_terracotta_tiles",
       "y": 270
+    },
+    "facing=east": {
+      "model": "chipped:block/light_blue_glazed_terracotta_tiles",
+      "y": 90
     }
   }
 }

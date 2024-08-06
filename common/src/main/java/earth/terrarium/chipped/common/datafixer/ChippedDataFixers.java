@@ -117,7 +117,7 @@ public final class ChippedDataFixers {
                 }
                 final String data = IOUtils.toString(stream, StandardCharsets.UTF_8);
                 fixers.add(new CsvMapper(data, resource));
-                if (PlatformUtils.isDevelopmentEnvironment()) {
+                if (false) {
                     Chipped.LOGGER.info("Loaded data fixer csv: " + resource);
                 }
             } catch (Exception e) {

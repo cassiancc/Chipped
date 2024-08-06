@@ -54,10 +54,10 @@ public class ChippedRecipeBuilder implements RecipeBuilder {
         if (this.advancement.getCriteria().isEmpty()) {
             throw new IllegalStateException("No way of obtaining recipe " + id);
         }
-        this.advancement.parent(ROOT_RECIPE_ADVANCEMENT)
-            .addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(id))
-            .rewards(net.minecraft.advancements.AdvancementRewards.Builder.recipe(id))
-            .requirements(RequirementsStrategy.OR);
+//        this.advancement.parent(ROOT_RECIPE_ADVANCEMENT)
+//            .addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(id))
+//            .rewards(net.minecraft.advancements.AdvancementRewards.Builder.recipe(id))
+//            .requirements(RequirementsStrategy.OR);
 
         consumer.accept(new Result(
             id,

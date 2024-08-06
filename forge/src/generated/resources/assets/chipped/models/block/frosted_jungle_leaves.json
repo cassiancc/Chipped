@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_column",
   "textures": {
-    "end": "chipped:block/jungle_leaves/frosted_jungle_leaves_top",
-    "side": "chipped:block/jungle_leaves/frosted_jungle_leaves"
+    "side": "chipped:block/jungle_leaves/frosted_jungle_leaves",
+    "end": "chipped:block/jungle_leaves/frosted_jungle_leaves_top"
   }
 }

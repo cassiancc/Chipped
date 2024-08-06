@@ -1,0 +1,25 @@
+modLoader = "javafml"
+loaderVersion = "[40,)"
+license = "MIT"
+issueTrackerURL="https://github.com/Resourceful-Bees/ResoucefulLib/issues/new/choose"
+
+[[mods]]
+    modId = "resourcefullib"
+    version = "1.1.24"
+    displayName = "Resourceful Lib"
+    authors = "ThatGravyBoat"
+    description = "Team Resourceful Library"
+
+[[dependencies.resourcefullib]]
+    modId = "forge"
+    mandatory = true
+    versionRange = "[40,)"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.resourcefullib]]
+    modId = "minecraft"
+    mandatory = true
+    versionRange = "[1.18,)"
+    ordering = "NONE"
+    side = "BOTH"
