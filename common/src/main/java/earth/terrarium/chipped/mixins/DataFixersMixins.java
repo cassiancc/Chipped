@@ -25,7 +25,7 @@ public class DataFixersMixins {
         at = @At("TAIL")
     )
     private static void chipped$addDataFixers(DataFixerBuilder builder, CallbackInfo ci) {
-        Schema schema = builder.addSchema(3120, SAME_NAMESPACED);
+        Schema schema = builder.addSchema(2975, SAME_NAMESPACED);
         ChippedDataFixers.addDataFixers(schema, builder::addFixer);
     }
 }
