@@ -36,10 +36,10 @@ dependencies {
     modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:$rootProject.rei_version"
     modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:$rootProject.rei_version"
     modCompileOnly "me.shedaniel:RoughlyEnoughItems-default-plugin-fabric:$rootProject.rei_version"
-    modLocalRuntime "dev.architectury:architectury-fabric:6.5.69"
+    modLocalRuntime "dev.architectury:architectury-fabric:4.12.94"
 
     modApi "com.teamresourceful.resourcefullib:resourcefullib-fabric-$rootProject.minecraft_version:$rootProject.resourcefullib_version"
-    modImplementation "me.codexadrian:ctm-refabricated:1.0.0+1.19"
+    modImplementation "me.codexadrian:ctm-refabricated:1.0.0+1.18"
 }
 
 processResources {
